@@ -1,300 +1,192 @@
-const bcrypt = require("bcryptjs");
 const mongoose = require("mongoose");
-const Admin = require("../models/admin.model");
+const Admin = require("../models/Admin.model");
 const asyncHandler = require("../utils/asyncHandler");
-const { generateToken } = require("../utils/generateToken");
-
+const ApiError = require("../utils/ApiError");
+const ApiResponse = require("../utils/ApiResponse");
+const { cookieOptions } = require("../utils/generateToken");
 
 const registerAdmin = asyncHandler(async (req, res) => {
   const { contact, emergency, email, password } = req.body;
 
   if (!contact || !emergency || !email || !password) {
-    return res.status(400).json({
-      success: false,
-      message: "All fields are required",
-    });
+    throw ApiError.badRequest("All fields are required");
   }
 
-  const existingAdmin = await Admin.findOne({
-    email: email.toLowerCase(),
-  });
-
+  const existingAdmin = await Admin.findOne({ email: email.toLowerCase() });
   if (existingAdmin) {
-    return res.status(409).json({
-      success: false,
-      message: "Admin already exists with this email",
-    });
+    throw ApiError.conflict("Admin already exists with this email");
   }
 
-  const salt = await bcrypt.genSalt(10);
-  const hashedPassword = await bcrypt.hash(password, salt);
+  const admin = await Admin.create({ contact, emergency, email, password });
 
-  const newAdmin = new Admin({
-    contact,
-    emergency,
-    email,
-    password: hashedPassword,
-  });
-
-  const savedAdmin = await newAdmin.save();
-
-  return res.status(201).json({
-    success: true,
-    data: {
-      _id: savedAdmin._id,
-      contact: savedAdmin.contact,
-      emergency: savedAdmin.emergency,
-      email: savedAdmin.email,
-      activeStatus: savedAdmin.activeStatus,
-  
-    }, 
-  });
+  return res.status(201).json(
+    new ApiResponse(
+      201,
+      {
+        _id: admin._id,
+        contact: admin.contact,
+        emergency: admin.emergency,
+        email: admin.email,
+        activeStatus: admin.activeStatus,
+      },
+      "Admin registered successfully"
+    )
+  );
 });
 
 const loginAdmin = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
-    return res.status(400).json({
-      success: false,
-      message: "Email and password are required",
-    });
+    throw ApiError.badRequest("Email and password are required");
   }
 
-  const admin = await Admin.findOne({
-    email: email.toLowerCase(),
-  });
+  const admin = await Admin.findOne({ email: email.toLowerCase() }).select("+password");
 
   if (!admin) {
-    return res.status(401).json({
-      success: false,
-      message: "Invalid email or password",
-    });
+    throw ApiError.unauthorized("Invalid email or password");
   }
 
   if (!admin.activeStatus) {
-    return res.status(403).json({
-      success: false,
-      message: "Admin account is inactive",
-    });
+    throw ApiError.forbidden("Admin account is inactive");
   }
 
-  const isMatch = await bcrypt.compare(password, admin.password);
-
-  if (!isMatch) {
-    return res.status(401).json({
-      success: false,
-      message: "Invalid email or password",
-    });
+  const isPasswordCorrect = await admin.isPasswordValid(password);
+  if (!isPasswordCorrect) {
+    throw ApiError.unauthorized("Invalid email or password");
   }
 
-  const token = generateToken(admin._id);
+  const token = admin.generateAuthToken();
 
-  res.cookie("token", token, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    maxAge: 7 * 24 * 60 * 60 * 1000,
-  });
-
-  return res.status(200).json({
-    success: true,
-    data: {
-      _id: admin._id,
-      contact: admin.contact,
-      emergency: admin.emergency,
-      email: admin.email,
-      activeStatus: admin.activeStatus,
-    },
-  });
+  return res
+    .status(200)
+    .cookie("token", token, cookieOptions)
+    .json(
+      new ApiResponse(
+        200,
+        {
+          _id: admin._id,
+          contact: admin.contact,
+          emergency: admin.emergency,
+          email: admin.email,
+          activeStatus: admin.activeStatus,
+        },
+        "Logged in successfully"
+      )
+    );
 });
-  
 
-
+const logoutAdmin = asyncHandler(async (req, res) => {
+  res.clearCookie("token", cookieOptions);
+  return res.status(200).json(new ApiResponse(200, null, "Logged out successfully"));
+});
 
 const getAdminProfile = asyncHandler(async (req, res) => {
-  return res.status(200).json({
-    success: true,
-    data: req.admin,
-  });
+  return res.status(200).json(new ApiResponse(200, req.admin, "Profile fetched"));
 });
-
 
 const getAdminById = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({
-      success: false,
-      message: "Invalid ID format",
-    });
+    throw ApiError.badRequest("Invalid ID format");
   }
 
-  const admin = await Admin.findById(id).select("-password");
-
+  const admin = await Admin.findById(id);
   if (!admin) {
-    return res.status(404).json({
-      success: false,
-      message: "Admin not found",
-    });
+    throw ApiError.notFound("Admin not found");
   }
 
-  return res.status(200).json({
-    success: true,
-    data: admin,
-  });
+  return res.status(200).json(new ApiResponse(200, admin));
 });
+
 const updateAdmin = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({
-      success: false,
-      message: "Invalid ID format",
-    });
+    throw ApiError.badRequest("Invalid ID format");
   }
 
   const { contact, emergency, email } = req.body;
 
   const updatedAdmin = await Admin.findByIdAndUpdate(
     id,
-    {
-      contact,
-      emergency,
-      email,
-    },
-    {
-      new: true,
-      runValidators: true,
-    }
-  ).select("-password");
+    { contact, emergency, email },
+    { new: true, runValidators: true }
+  );
 
   if (!updatedAdmin) {
-    return res.status(404).json({
-      success: false,
-      message: "Admin not found",
-    });
+    throw ApiError.notFound("Admin not found");
   }
 
-  return res.status(200).json({
-    success: true,
-    data: updatedAdmin,
-  });
+  return res.status(200).json(new ApiResponse(200, updatedAdmin, "Admin updated"));
 });
-
-
 
 const updateAdminPassword = asyncHandler(async (req, res) => {
   const { id } = req.params;
   const { oldPassword, newPassword } = req.body;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({
-      success: false,
-      message: "Invalid ID format",
-    });
+    throw ApiError.badRequest("Invalid ID format");
   }
 
-  const admin = await Admin.findById(id);
+  if (!oldPassword || !newPassword) {
+    throw ApiError.badRequest("Old and new password are required");
+  }
 
+  const admin = await Admin.findById(id).select("+password");
   if (!admin) {
-    return res.status(404).json({
-      success: false,
-      message: "Admin not found",
-    });
+    throw ApiError.notFound("Admin not found");
   }
 
-  const isMatch = await bcrypt.compare(oldPassword, admin.password);
-
+  const isMatch = await admin.isPasswordValid(oldPassword);
   if (!isMatch) {
-    return res.status(401).json({
-      success: false,
-      message: "Old password is incorrect",
-    });
+    throw ApiError.unauthorized("Old password is incorrect");
   }
 
-  const salt = await bcrypt.genSalt(10);
-  admin.password = await bcrypt.hash(newPassword, salt);
-
+  admin.password = newPassword;
   await admin.save();
 
-  return res.status(200).json({
-    success: true,
-    message: "Password updated successfully",
-  });
+  return res.status(200).json(new ApiResponse(200, null, "Password updated successfully"));
 });
-
-
 
 const toggleAdminStatus = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({
-      success: false,
-      message: "Invalid ID format",
-    });
+    throw ApiError.badRequest("Invalid ID format");
   }
 
   const admin = await Admin.findById(id);
-
   if (!admin) {
-    return res.status(404).json({
-      success: false,
-      message: "Admin not found",
-    });
+    throw ApiError.notFound("Admin not found");
   }
 
   admin.activeStatus = !admin.activeStatus;
-
   await admin.save();
 
-  return res.status(200).json({
-    success: true,
-    data: admin,
-  });
+  return res.status(200).json(new ApiResponse(200, admin, "Status toggled"));
 });
-
-
 
 const deleteAdmin = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({
-      success: false,
-      message: "Invalid ID format",
-    });
+    throw ApiError.badRequest("Invalid ID format");
   }
 
   const deletedAdmin = await Admin.findByIdAndDelete(id);
-
   if (!deletedAdmin) {
-    return res.status(404).json({
-      success: false,
-      message: "Admin not found",
-    });
+    throw ApiError.notFound("Admin not found");
   }
 
-  return res.status(200).json({
-    success: true,
-    message: "Admin deleted successfully",
-  });
+  return res.status(200).json(new ApiResponse(200, null, "Admin deleted successfully"));
 });
-const logoutAdmin = asyncHandler(async (req, res) => {
-  res.clearCookie("token");
-
-  return res.status(200).json({
-    success: true,
-    message: "Logged out successfully",
-  });
-});
-
 
 module.exports = {
   registerAdmin,
   loginAdmin,
-  logoutAdmin,  
+  logoutAdmin,
   getAdminProfile,
   getAdminById,
   updateAdmin,

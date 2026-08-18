@@ -13,7 +13,7 @@ const {
   deleteAdmin,
 } = require("../controllers/authController");
 
-const authMiddleware = require("../middlewares/auth.middleware");
+const authMiddleware = require("../middlewares/auth.Middleware");
 
 router.post("/register", registerAdmin);
 
