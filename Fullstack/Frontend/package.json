@@ -10,10 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD:TechTorch-version2/Frontend/package.json
-=======
-    "@tailwindcss/vite": "^4.3.3",
->>>>>>> 73ad5c7950e150c5bcc50c39ecf19123d8b78734:Fullstack/Frontend/package.json
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.2",
