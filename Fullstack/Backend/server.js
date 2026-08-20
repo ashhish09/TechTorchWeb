@@ -42,16 +42,12 @@ app.use("/api/featured-stories", featuredStoryRoutes);
 app.use("/api/opportunities", opportunityRoutes);
 app.use("/api/upcoming-events", upcomingEventRoutes);
 app.use("/api/auth", authRoutes);
-<<<<<<< HEAD
 
 app.get("/", (req, res) => {
   res.send("TechTorch Backend is running");
 });
 
 app.use(notFound);
-=======
-app.use("/api/admin", adminRoutes);
->>>>>>> 066aaf75a849eef74b46d4888b8fe1432141cf23
 app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 5000;

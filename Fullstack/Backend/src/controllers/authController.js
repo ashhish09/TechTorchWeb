@@ -8,16 +8,8 @@ const { cookieOptions } = require("../utils/generateToken");
 const registerAdmin = asyncHandler(async (req, res) => {
   const { name, contact, emergency, email, password } = req.body;
 
-<<<<<<< HEAD
   if (!contact || !emergency || !email || !password) {
     throw ApiError.badRequest("All fields are required");
-=======
-  if (!name || !contact || !emergency || !email || !password) {
-    return res.status(400).json({
-      success: false,
-      message: "All fields are required",
-    });
->>>>>>> 066aaf75a849eef74b46d4888b8fe1432141cf23
   }
 
   const existingAdmin = await Admin.findOne({ email: email.toLowerCase() });
@@ -27,7 +19,6 @@ const registerAdmin = asyncHandler(async (req, res) => {
 
   const admin = await Admin.create({ contact, emergency, email, password });
 
-<<<<<<< HEAD
   return res.status(201).json(
     new ApiResponse(
       201,
@@ -41,29 +32,6 @@ const registerAdmin = asyncHandler(async (req, res) => {
       "Admin registered successfully"
     )
   );
-=======
-  const newAdmin = new Admin({
-    name,
-    contact,
-    emergency,
-    email,
-    password: hashedPassword,
-  });
-
-  const savedAdmin = await newAdmin.save();
-
-  return res.status(201).json({
-    success: true,
-    data: {
-      _id: savedAdmin._id,
-      contact: savedAdmin.contact,
-      emergency: savedAdmin.emergency,
-      email: savedAdmin.email,
-      activeStatus: savedAdmin.activeStatus,
-  
-    }, 
-  });
->>>>>>> 066aaf75a849eef74b46d4888b8fe1432141cf23
 });
 
 const loginAdmin = asyncHandler(async (req, res) => {
