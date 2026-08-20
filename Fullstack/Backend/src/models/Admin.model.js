@@ -4,6 +4,12 @@ const jwt = require("jsonwebtoken");
 
 const adminSchema = new mongoose.Schema(
   {
+     
+    name: {
+      type: String,
+      required: [true, "Name is required"],
+      trim: true,
+    },
     contact: {
       type: String,
       required: [true, "Contact is required"],
