@@ -129,7 +129,7 @@ export default function CtaSection({
           font-weight: 700;
           font-size: 16px;
 
-          padding: 16px 26px;
+          padding: 14px 24px;
 
           border-radius: 10px;
 
