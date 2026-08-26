@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import Slide1 from "./hero1slides/Slide1.jsx";
 
 // =================================================
 // SLIDES
