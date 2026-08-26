@@ -10,17 +10,23 @@ import Hero2 from "./components/Hero2";
 import Hero3 from "./components/Hero3";
 import Section4 from "./components/Section4";
 import Section5 from "./components/Section5";
+<<<<<<<<< Temporary merge branch 1
+import Section6 from "./components/Section6"
+=========
 import Section6 from "./components/Section6";
+>>>>>>>>> Temporary merge branch 2
 import Section7 from "./components/section7";
 import Section8 from "./components/section8";
 import Section9 from "./components/section9";
 import Footer from "./components/Footer";
 
+<<<<<<<<< Temporary merge branch 1
+=========
 import Slide1 from "./components/hero1slides/Slide1.jsx";
 import Slide13 from "./components/hero1slides/Slide13.jsx";
-
-import AdminLogin from "./pages/AdminLogin";
-import AdminForgotPassword from "./pages/AdminForgotPassword";
+import Slide21 from "./components/hero1slides/Slide21.jsx";
+import Slide25 from "./components/hero1slides/Slide25.jsx";
+>>>>>>>>> Temporary merge branch 2
 
 // =================================================
 // HOME PAGE
@@ -29,43 +35,53 @@ function Home() {
   return (
     <div>
       <Navbar />
+
       <Hero />
+
       <Hero2 />
+
       <Hero3 />
+
       <Section4 />
+
       <Section5 />
+
       <Section6 />
+
       <Section7 />
+
       <Section8 />
+
       <Section9 />
+
       <Footer />
     </div>
   );
 }
 
-// =================================================
-// SLIDE 1 PAGE
-// =================================================
 function Slide1Page() {
   return (
     <div>
-      <Slide1 />
-      <Slide13 />
+      <HeroSlide01 />
+      <HeroSlide02/>
+      <HeroSlide03/>
+      <HeroSlide04/>
     </div>
   );
 }
 
-// =================================================
-// SLIDE 2 PAGE
-// =================================================
 function Slide2Page() {
   return (
     <div>
-      <Slide21 />
-      <Slide25 />
+      <Hero02Slide01 />
+      <Hero02Slide02 />
+      <Hero02Slide05 />
+      <Hero02Slide06 />
+
     </div>
   );
 }
+
 
 // =================================================
 // APP
@@ -73,23 +89,24 @@ function Slide2Page() {
 function App() {
   return (
     <Routes>
-      {/* HOME */}
+
+      {/* ================= HOME PAGE ================= */}
       <Route
         path="/"
         element={<Home />}
       />
 
-      {/* SLIDE 1 */}
+      {/* ================= SLIDE 1 / SOLUTIONS PAGE ================= */}
       <Route
         path="/Slide1"
         element={<Slide1Page />}
       />
 
-      {/* SLIDE 2 */}
       <Route
-        path="/Slide21"
-        element={<Slide2Page />}
+      path="/Slide2"
+      element={<Slide2Page />}
       />
+
     </Routes>
   );
 }
