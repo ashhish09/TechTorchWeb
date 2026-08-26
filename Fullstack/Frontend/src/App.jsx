@@ -10,23 +10,22 @@ import Hero2 from "./components/Hero2";
 import Hero3 from "./components/Hero3";
 import Section4 from "./components/Section4";
 import Section5 from "./components/Section5";
-<<<<<<<<< Temporary merge branch 1
+
 import Section6 from "./components/Section6"
-=========
+
 import Section6 from "./components/Section6";
->>>>>>>>> Temporary merge branch 2
+
 import Section7 from "./components/section7";
 import Section8 from "./components/section8";
 import Section9 from "./components/section9";
 import Footer from "./components/Footer";
 
-<<<<<<<<< Temporary merge branch 1
-=========
+
 import Slide1 from "./components/hero1slides/Slide1.jsx";
 import Slide13 from "./components/hero1slides/Slide13.jsx";
 import Slide21 from "./components/hero1slides/Slide21.jsx";
 import Slide25 from "./components/hero1slides/Slide25.jsx";
->>>>>>>>> Temporary merge branch 2
+
 
 // =================================================
 // HOME PAGE
