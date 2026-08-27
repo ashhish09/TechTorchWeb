@@ -1,9 +1,9 @@
+const bcrypt = require("bcryptjs");
 const mongoose = require("mongoose");
 const Admin = require("../models/Admin.model");
 const asyncHandler = require("../utils/asyncHandler");
-const ApiError = require("../utils/ApiError");
-const ApiResponse = require("../utils/ApiResponse");
-const { cookieOptions } = require("../utils/generateToken");
+const { generateToken } = require("../utils/generateToken");
+
 
 const registerAdmin = asyncHandler(async (req, res) => {
   const { name, contact, emergency, email, password } = req.body;
@@ -17,22 +17,33 @@ const registerAdmin = asyncHandler(async (req, res) => {
     throw ApiError.conflict("Admin already exists with this email");
   }
 
-  const admin = await Admin.create({ contact, emergency, email, password });
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(password, salt);
 
-  return res.status(201).json(
-    new ApiResponse(
-      201,
-      {
-        _id: admin._id,
-        contact: admin.contact,
-        emergency: admin.emergency,
-        email: admin.email,
-        activeStatus: admin.activeStatus,
-      },
-      "Admin registered successfully"
-    )
-  );
+  const newAdmin = new Admin({
+    name,
+    contact,
+    emergency,
+    email,
+    password: hashedPassword,
+  });
+
+  const savedAdmin = await newAdmin.save();
+
+  return res.status(201).json({
+    success: true,
+    data: {
+      _id: savedAdmin._id,
+      contact: savedAdmin.contact,
+      emergency: savedAdmin.emergency,
+      email: savedAdmin.email,
+      activeStatus: savedAdmin.activeStatus,
+  
+    }, 
+  });
 });
+
+// ================= LOGIN ADMIN =================
 
 const loginAdmin = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
@@ -80,10 +91,14 @@ const logoutAdmin = asyncHandler(async (req, res) => {
   res.clearCookie("token", cookieOptions);
   return res.status(200).json(new ApiResponse(200, null, "Logged out successfully"));
 });
+  
+
+
 
 const getAdminProfile = asyncHandler(async (req, res) => {
   return res.status(200).json(new ApiResponse(200, req.admin, "Profile fetched"));
 });
+
 
 const getAdminById = asyncHandler(async (req, res) => {
   const { id } = req.params;
@@ -99,7 +114,6 @@ const getAdminById = asyncHandler(async (req, res) => {
 
   return res.status(200).json(new ApiResponse(200, admin));
 });
-
 const updateAdmin = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
@@ -121,6 +135,8 @@ const updateAdmin = asyncHandler(async (req, res) => {
 
   return res.status(200).json(new ApiResponse(200, updatedAdmin, "Admin updated"));
 });
+
+
 
 const updateAdminPassword = asyncHandler(async (req, res) => {
   const { id } = req.params;
@@ -150,6 +166,8 @@ const updateAdminPassword = asyncHandler(async (req, res) => {
   return res.status(200).json(new ApiResponse(200, null, "Password updated successfully"));
 });
 
+
+
 const toggleAdminStatus = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
@@ -168,6 +186,8 @@ const toggleAdminStatus = asyncHandler(async (req, res) => {
   return res.status(200).json(new ApiResponse(200, admin, "Status toggled"));
 });
 
+
+
 const deleteAdmin = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
@@ -180,13 +200,25 @@ const deleteAdmin = asyncHandler(async (req, res) => {
     throw ApiError.notFound("Admin not found");
   }
 
-  return res.status(200).json(new ApiResponse(200, null, "Admin deleted successfully"));
+  return res.status(200).json({
+    success: true,
+    message: "Admin deleted successfully",
+  });
 });
+const logoutAdmin = asyncHandler(async (req, res) => {
+  res.clearCookie("token");
+
+  return res.status(200).json({
+    success: true,
+    message: "Logged out successfully",
+  });
+});
+
 
 module.exports = {
   registerAdmin,
   loginAdmin,
-  logoutAdmin,
+  logoutAdmin,  
   getAdminProfile,
   getAdminById,
   updateAdmin,
@@ -194,3 +226,4 @@ module.exports = {
   toggleAdminStatus,
   deleteAdmin,
 };
+

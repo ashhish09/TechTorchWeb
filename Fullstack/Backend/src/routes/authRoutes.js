@@ -4,7 +4,7 @@ const router = express.Router();
 const {
   registerAdmin,
   loginAdmin,
-  logoutAdmin,
+  logoutAdmin, 
   getAdminProfile,
   getAdminById,
   updateAdmin,
@@ -18,8 +18,9 @@ const { authLimiter } = require("../middlewares/rateLimiter");
 
 router.post("/register", authLimiter, registerAdmin);
 
-router.post("/login", authLimiter, loginAdmin);
+router.post("/login", loginAdmin);
 router.post("/logout", authMiddleware, logoutAdmin);
+
 
 router.get("/profile", authMiddleware, getAdminProfile);
 

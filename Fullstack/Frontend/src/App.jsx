@@ -18,25 +18,9 @@ import Section8 from "./components/section8";
 import Section9 from "./components/section9";
 import Footer from "./components/Footer";
 
-// ================= HERO SLIDES (Slide1 page) =================
-import HeroSlide01 from "./components/HeroSlides/HeroSlide01.jsx";
-import HeroSlide02 from "./components/HeroSlides/HeroSlide02.jsx";
-import HeroSlide03 from "./components/HeroSlides/HeroSlide03.jsx";
-import HeroSlide04 from "./components/HeroSlides/HeroSlide04.jsx";
-import Hero02Slide04 from "./components/Hero2Slides/Hero02Slide04.jsx";
+import AdminLogin from "./pages/AdminLogin";
+import AdminForgotPassword from "./pages/AdminForgotPassword";
 
-// ================= HERO2 SLIDES (Slide2 page) =================
-import Hero02Slide01 from "./components/Hero2Slides/Hero02Slide01.jsx";
-import Hero02Slide02 from "./components/Hero2Slides/Hero02Slide02.jsx";
-import Hero02Slide03 from "./components/Hero2Slides/Hero02Slide03.jsx";
-import Hero02Slide05 from "./components/Hero2Slides/Hero02Slide05.jsx";
-import Hero02Slide06 from "./components/Hero2Slides/Hero02Slide06.jsx";
-
-
-
-// =================================================
-// HOME PAGE
-// =================================================
 function Home() {
   return (
     <div>
@@ -103,10 +87,9 @@ function App() {
       <Route path="/Slide1" element={<Slide1Page />} />
 
       <Route
-      path="/Slide2"
-      element={<Slide2Page />}
+        path="/admin-forgot-password"
+        element={<AdminForgotPassword />}
       />
-
     </Routes>
   );
 }
