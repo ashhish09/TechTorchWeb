@@ -50,7 +50,7 @@ const slides = [
     ctaText: "BUILD WITH TECHTORCH",
 
     // Slide13 page
-    ctaHref: "/slide13",
+    ctaHref: "/slide3",
 
     focus: "70% 50%",
   },

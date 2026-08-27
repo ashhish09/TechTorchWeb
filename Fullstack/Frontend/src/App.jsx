@@ -23,6 +23,7 @@ import HeroSlide01 from "./components/HeroSlides/HeroSlide01.jsx";
 import HeroSlide02 from "./components/HeroSlides/HeroSlide02.jsx";
 import HeroSlide03 from "./components/HeroSlides/HeroSlide03.jsx";
 import HeroSlide04 from "./components/HeroSlides/HeroSlide04.jsx";
+import Hero02Slide04 from "./components/Hero2Slides/Hero02Slide04.jsx";
 
 // ================= HERO2 SLIDES (Slide2 page) =================
 import Hero02Slide01 from "./components/Hero2Slides/Hero02Slide01.jsx";
@@ -30,6 +31,8 @@ import Hero02Slide02 from "./components/Hero2Slides/Hero02Slide02.jsx";
 import Hero02Slide03 from "./components/Hero2Slides/Hero02Slide03.jsx";
 import Hero02Slide05 from "./components/Hero2Slides/Hero02Slide05.jsx";
 import Hero02Slide06 from "./components/Hero2Slides/Hero02Slide06.jsx";
+
+
 
 // =================================================
 // HOME PAGE
@@ -79,11 +82,13 @@ function Slide2Page() {
       <Hero02Slide01 />
       <Hero02Slide02 />
       <Hero02Slide03 />
+      <Hero02Slide04 />
       <Hero02Slide05 />
       <Hero02Slide06 />
     </div>
   );
 }
+
 
 // =================================================
 // APP
@@ -97,7 +102,11 @@ function App() {
       {/* ================= SLIDE 1 / SOLUTIONS PAGE ================= */}
       <Route path="/Slide1" element={<Slide1Page />} />
 
-      <Route path="/Slide2" element={<Slide2Page />} />
+      <Route
+      path="/Slide2"
+      element={<Slide2Page />}
+      />
+
     </Routes>
   );
 }
