@@ -21,6 +21,22 @@ import Footer from "./components/Footer";
 import AdminLogin from "./pages/AdminLogin";
 import AdminForgotPassword from "./pages/AdminForgotPassword";
 
+<<<<<<< HEAD
+=======
+import Hero02Slide01 from "./components/Hero2Slides/Hero02Slide01.jsx";
+import Hero02Slide02 from "./components/Hero2Slides/Hero02Slide02.jsx";
+import Hero02Slide03 from "./components/Hero2Slides/Hero02Slide03.jsx";
+import Hero02Slide05 from "./components/Hero2Slides/Hero02Slide05.jsx";
+import Hero02Slide06 from "./components/Hero2Slides/Hero02Slide06.jsx";
+import Hero03Slide01 from  "./components/Hero3Slides/Hero03Slide01.jsx";
+import Hero03Slide02 from "./components/Hero3Slides/Hero03Slide02.jsx";
+
+
+
+// =================================================
+// HOME PAGE
+// =================================================
+>>>>>>> 457b2e366042655e4fd7f8d799036c1b36fd01c5
 function Home() {
   return (
     <div>
