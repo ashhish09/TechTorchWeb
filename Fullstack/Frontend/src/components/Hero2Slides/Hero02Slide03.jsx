@@ -47,6 +47,7 @@ const cards = [
   },
 ];
 
+<<<<<<< HEAD
   /* =========================
      CARD REFS
   ========================= */
@@ -637,6 +638,106 @@ const cards = [
 >>>>>>>>> Temporary merge branch 2
 
   }, sectionRef);
+=======
+/* =========================================================
+   LAYOUT CONSTANTS — used both for rendering cards and for
+   drawing the connector line, so they always stay in sync.
+   (Desktop-only — tablet/mobile use a flexible, auto-height
+   layout instead so long titles never get clipped.)
+========================================================= */
+const CARD_WIDTH = 360;
+const CARD_GAP = 150;
+const CARD_HEIGHT = 260;
+const START_PADDING = 80;
+const END_PADDING = 120;
+const TOP_LOW = 150; // "down" position in the zigzag
+const TOP_HIGH = 60; // "up" position in the zigzag
+const TRACK_AREA_HEIGHT = TOP_LOW + CARD_HEIGHT + 90; // extra buffer so wrapped text never clips
+
+function getCardLeft(index) {
+  return START_PADDING + index * (CARD_WIDTH + CARD_GAP);
+}
+
+function getCardTop(index) {
+  return index % 2 === 0 ? TOP_LOW : TOP_HIGH;
+}
+
+function getCardCenter(index) {
+  return {
+    x: getCardLeft(index) + CARD_WIDTH / 2,
+    y: getCardTop(index) + CARD_HEIGHT / 2,
+  };
+}
+
+function getTrackWidth() {
+  return (
+    START_PADDING +
+    cards.length * CARD_WIDTH +
+    (cards.length - 1) * CARD_GAP +
+    END_PADDING
+  );
+}
+
+/* A smooth chain of upward-bowed arcs connecting every card
+   center, in order — this is the "all cards connected" line. */
+function buildConnectorPath() {
+  const points = cards.map((_, i) => getCardCenter(i));
+  let d = `M ${points[0].x},${points[0].y}`;
+
+  for (let i = 0; i < points.length - 1; i++) {
+    const a = points[i];
+    const b = points[i + 1];
+    const midX = (a.x + b.x) / 2;
+    const arcY = Math.min(a.y, b.y) - 45;
+    d += ` Q ${midX},${arcY} ${b.x},${b.y}`;
+  }
+
+  return d;
+}
+
+export default function OnePlatformSection() {
+  const sectionRef = useRef(null);
+  const viewportRef = useRef(null);
+  const trackRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Watch the breakpoint continuously (not just once at mount) so
+  // resizing the window / rotating a tablet switches modes correctly.
+  useLayoutEffect(() => {
+    const mq = window.matchMedia("(max-width: 1024px)");
+    setIsMobile(mq.matches);
+
+    const handleChange = (e) => setIsMobile(e.matches);
+    mq.addEventListener("change", handleChange);
+    return () => mq.removeEventListener("change", handleChange);
+  }, []);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      if (isMobile) return; // tablet/mobile: native swipeable row, no GSAP pin
+
+      const track = trackRef.current;
+      const viewport = viewportRef.current;
+      if (!track || !viewport) return;
+
+      const getScrollDistance = () =>
+        Math.max(track.scrollWidth - viewport.offsetWidth, 0);
+
+      gsap.to(track, {
+        x: () => -getScrollDistance(),
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: () => "+=" + getScrollDistance() * 1.15,
+          scrub: 1, // small lag = smooth, buttery scroll feel
+          pin: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+    }, sectionRef);
+>>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
 
     return () => ctx.revert();
   }, [isMobile]);

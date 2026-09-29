@@ -1,9 +1,5 @@
 require("dotenv").config();
-const companyEnvironmentRoutes = require("./src/routes/companyEnvironmentRoutes");
-const latestUpdateRoutes = require("./src/routes/latestUpdateRoutes");
-const featuredStoryRoutes = require("./src/routes/featuredStoryRoutes");
-const opportunityRoutes = require("./src/routes/opportunityRoutes");
-const upcomingEventRoutes = require("./src/routes/upcomingEventRoutes");
+
 const {connectDB} = require("./src/config/db");
 const errorMiddleware = require("./src/middlewares/error.Middleware");
 const notFound = require("./src/middlewares/notFound.Middleware");
@@ -11,6 +7,10 @@ const { generalLimiter } = require("./src/middlewares/rateLimiter");
 const sanitizeInput = require("./src/middlewares/sanitizeInput");
 const authRoutes = require("./src/routes/authRoutes");
 const adminRoutes = require("./src/routes/adminRoutes");
+const newsRoutes = require("./src/routes/newsRoutes");
+const jobOpeningRoutes = require("./src/routes/jobOpeningRoutes");
+const eventRoutes = require("./src/routes/eventRoutes");
+const latestUpdateRoutes = require("./src/routes/latestUpdateRoutes");;
 connectDB();
 const express = require("express");
 const cors = require("cors");

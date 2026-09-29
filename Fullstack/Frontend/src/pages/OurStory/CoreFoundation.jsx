@@ -31,7 +31,25 @@ export default function CoreFoundation() {
             style={{ backgroundColor: "#9d174d" }}
           />
 
+<<<<<<< HEAD
           <p className="max-w-[420px] text-[15px] leading-relaxed text-black sm:text-[16px] lg:max-w-[360px]">
+=======
+          <p
+            className="
+<<<<<<< HEAD
+              max-w-[360px] max-w-full
+=======
+              max-w-[420px]
+              lg:max-w-[360px]
+>>>>>>> 559925419f74898bfa5620e578852d8522d659d1
+              text-[15px]
+              sm:text-[16px]
+              leading-relaxed
+              text-black
+              font-inter
+            "
+          >
+>>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
             Everything we build is rooted in a steadfast commitment to
             foundational integrity and visionary execution.
           </p>
