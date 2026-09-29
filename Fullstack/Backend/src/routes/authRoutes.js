@@ -21,7 +21,6 @@ router.post("/register", authLimiter, registerAdmin);
 router.post("/login", loginAdmin);
 router.post("/logout", authMiddleware, logoutAdmin);
 
-
 router.get("/profile", authMiddleware, getAdminProfile);
 
 router.get("/:id", authMiddleware, getAdminById);

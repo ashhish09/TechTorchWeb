@@ -2,33 +2,39 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-const adminLoginSchema = new mongoose.Schema(
+const adminSchema = new mongoose.Schema(
   {
+
+    name: {
+      type: String,
+      required: [true, "Name is required"],
+      trim: true,
+    },
+    contact: {
+      type: String,
+      required: [true, "Contact is required"],
+      trim: true,
+    },
+    emergency: {
+      type: String,
+      required: [true, "Emergency contact is required"],
+      trim: true,
+    },
     email: {
       type: String,
-      required: true,
+      required: [true, "Email is required"],
       unique: true,
       lowercase: true,
       trim: true,
     },
-
     password: {
       type: String,
       required: [true, "Password is required"],
     },
     activeStatus: {
-  type: Boolean,
-  default: true,
-},
-
-    otp: {
-      type: String,
-      default: null,
-    },
-
-    otpExpiry: {
-      type: Date,
-      default: null,
+      type: Boolean,
+      required: true,
+      default: true,
     },
   },
   {

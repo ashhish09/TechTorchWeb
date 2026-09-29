@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 const mongoose = require("mongoose");
-const Admin = require("../models/Admin.model");
+const Admin = require("../models/admin.model");
 const asyncHandler = require("../utils/asyncHandler");
 const { generateToken } = require("../utils/generateToken");
 
@@ -43,8 +43,6 @@ const registerAdmin = asyncHandler(async (req, res) => {
   });
 });
 
-// ================= LOGIN ADMIN =================
-
 const loginAdmin = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
@@ -86,6 +84,7 @@ const loginAdmin = asyncHandler(async (req, res) => {
       )
     );
 });
+  
 
 const logoutAdmin = asyncHandler(async (req, res) => {
   res.clearCookie("token", cookieOptions);
@@ -226,4 +225,3 @@ module.exports = {
   toggleAdminStatus,
   deleteAdmin,
 };
-

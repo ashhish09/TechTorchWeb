@@ -1,226 +1,194 @@
 import React from "react";
 
-const steps = [
-  {
-    no: "01",
-    title: "Understand",
-    text: "We learn about your business, your current systems and the challenges your teams are facing.",
-  },
-  {
-    no: "02",
-    title: "Plan",
-    text: "We identify the key priorities and create a clear plan based on your business goals.",
-  },
-  {
-    no: "03",
-    title: "Connect",
-    text: "We bring the right processes, information and teams together.",
-  },
-  {
-    no: "04",
-    title: "Implement",
-    text: "We put the solution in place through a structured and manageable implementation process.",
-  },
-  {
-    no: "05",
-    title: "Improve",
-    text: "Once the system is in place, we continue to look for ways to improve it as your business changes.",
-  },
-];
-
 export default function PracticalERPPath() {
+  const steps = [
+    {
+      number: "01",
+      title: "Understand",
+      description:
+        "We learn about your business, your current systems and the challenges your teams are facing.",
+    },
+    {
+      number: "02",
+      title: "Plan",
+      description:
+        "We identify the key priorities and create a clear plan based on your business goals.",
+    },
+    {
+      number: "03",
+      title: "Connect",
+      description:
+        "We bring the right processes, information and teams together.",
+    },
+    {
+      number: "04",
+      title: "Implement",
+      description:
+        "We put the solution in place through a structured and manageable implementation process.",
+    },
+    {
+      number: "05",
+      title: "Improve",
+      description:
+        "Once the system is in place, we continue to look for ways to improve it as your business changes.",
+    },
+  ];
+
   return (
-    <section className="relative w-full overflow-hidden bg-white">
-      {/* =====================================================
-          MAIN SECTION
-      ====================================================== */}
+    <section
+      id="vxbl7s"
+      className="relative w-full overflow-hidden bg-white"
+    >
       <div
         className="
-          relative
-          mx-auto
+          relative mx-auto
           w-full
           max-w-[1520px]
-          min-h-[435px]
           overflow-hidden
           bg-white
 
-          xs:min-h-[555px]
-          sm:min-h-[575px]
-          md:min-h-[595px]
+          min-h-[520px]
+
+          xs:min-h-[545px]
+
+          sm:min-h-[565px]
+
+          md:min-h-[585px]
+
           lg:min-h-[615px]
           xl:min-h-[600px]
         "
       >
         {/* =====================================================
-            RIGHT SIDE IMAGE
-            (sm/md/lg/xl values below are UNCHANGED from the
-            provided file — only base and xs were added)
+            IMAGE
         ====================================================== */}
+
         <div
           className="
-            pointer-events-none
             absolute
             right-0
-            top-[130px]
-            z-[1]
-            h-[300px]
-            w-[68%]
-            overflow-hidden
+            bottom-0
+            z-0
 
-            xs:top-[175px]
-            xs:h-[380px]
-            xs:w-[72%]
+            w-[115%]
 
-            sm:top-[180px]
-            sm:h-[395px]
-            sm:w-[72%]
+            xs:w-[110%]
 
-            md:top-[185px]
-            md:h-[415px]
-            md:w-[73%]
+            sm:w-[100%]
 
-            lg:top-[190px]
+            md:w-[92%]
+
+            lg:right-0
+            lg:top-[160px]
+            lg:bottom-auto
             lg:h-[435px]
             lg:w-[74%]
 
-            xl:top-[195px]
-            xl:h-[450px]
+            xl:top-[165px]
+            xl:h-[475px]
             xl:w-[75%]
           "
         >
           <img
+            id="8f14dd"
             src="/Slide2.2.png"
             alt="TorchX ERP platform"
             className="
-              absolute
-              right-0
-              top-[-30px]
-              h-[calc(100%+10px)]
+              block
+              h-auto
               w-full
-              object-fill
+              object-contain
+              object-right
+
+              lg:absolute
+              lg:right-0
+              lg:top-[-30px]
+              lg:h-[calc(100%+10px)]
+              lg:w-full
+              lg:object-fill
             "
           />
 
-          {/* LEFT SOFT WHITE FADE */}
+          {/* LEFT FADE */}
+
           <div
             className="
+              pointer-events-none
               absolute
               inset-y-0
               left-0
-              w-[27%]
+              z-10
+              w-[30%]
+
               bg-gradient-to-r
               from-white
               via-white/85
               to-transparent
+
+              xs:w-[29%]
+              sm:w-[27%]
+              md:w-[25%]
+
+              lg:w-[27%]
             "
           />
         </div>
 
         {/* =====================================================
             CONTENT
-            (sm/md/lg/xl values below are UNCHANGED from the
-            provided file — only base and xs were added)
         ====================================================== */}
+
         <div
           className="
             relative
-            z-[5]
-            px-4
-            pt-5
+            z-20
+            w-full
+
+            px-5
+            pt-7
 
             xs:px-6
-            xs:pt-7
+            xs:pt-8
 
-            sm:px-9
-            sm:pt-8
+            sm:px-8
+            sm:pt-9
 
-            md:px-11
+            md:px-10
             md:pt-9
 
             lg:px-[50px]
             lg:pt-[30px]
+            lg:translate-x-8
 
             xl:px-[52px]
             xl:pt-[28px]
-
-            translate-x-1
-            xs:translate-x-2
-            sm:translate-x-4
-            md:translate-x-6
-            lg:translate-x-8
             xl:translate-x-12
           "
         >
-          {/* ===================================================
-              HEADING
-          ==================================================== */}
-          <h1
-            className="
-              font-['Inter']
-              text-[22px]
-              font-medium
-              leading-[1.12]
-              tracking-[-0.03em]
-              text-[#111111]
+          {/* =====================================================
+              TORCHX SUITE
+          ====================================================== */}
 
-              xs:text-[30px]
-              xs:leading-[1.08]
-              xs:tracking-[-0.045em]
-
-              sm:text-[33px]
-              md:text-[36px]
-              lg:text-[39px]
-              xl:text-[33px]
-            "
-          >
-            A Practical Path to{" "}
-            <span className="text-[#850052]">ERP</span>
-          </h1>
-
-          {/* ===================================================
-              DESCRIPTION
-          ==================================================== */}
-          <p
-            className="
-              mt-[12px]
-              max-w-[640px]
-              font-['Inter']
-              text-[12px]
-              font-medium
-              leading-[1.32]
-              text-[#1e1e1e]
-
-              xs:mt-[17px]
-              xs:text-[14px]
-              xs:leading-[1.28]
-
-              sm:text-[15px]
-              md:text-[15px]
-              lg:text-[16px]
-              xl:text-[15.5px]
-            "
-          >
-            Every business is different, so there is no single ERP approach
-            that works for everyone. We take the time to understand your
-            business before deciding what needs to change.
-          </p>
-
-          {/* ===================================================
-              TORCHX SUITE IMAGE
-              (unchanged — already hidden below sm)
-          ==================================================== */}
           <div
+            id="9k9mjj"
             className="
               absolute
-              right-6
-              top-[25px]
-              hidden
-              w-[180px]
-              sm:right-9
-              sm:block
+              right-5
+              top-6
+              z-40
+              w-[95px]
 
-              md:right-11
-              md:w-[200px]
+              xs:right-6
+              xs:top-7
+              xs:w-[105px]
+
+              sm:right-8
+              sm:top-8
+              sm:w-[125px]
+
+              md:right-10
+              md:top-9
+              md:w-[150px]
 
               lg:right-[50px]
               lg:top-[30px]
@@ -230,39 +198,127 @@ export default function PracticalERPPath() {
               xl:w-[250px]
             "
           >
-           <img
-  src="/TorchX Suite.png"
-  alt="TorchX Suite"
-  className="
-    block
-    h-auto
-    w-[85%]
-    max-w-full
-    object-contain
-    mt-6
-    mx-auto
-  "
-/>
+            <img
+              src="/TorchX Suite.png"
+              alt="TorchX Suite"
+              className="
+                block
+                h-auto
+                w-full
+                object-contain
+
+                lg:mx-auto
+                lg:mt-6
+                lg:w-[75%]
+              "
+            />
           </div>
 
-          {/* ===================================================
-              STEPS
-              (sm/md/lg/xl values below are UNCHANGED from the
-              provided file — only base and xs were added)
-          ==================================================== */}
-          <div
+          {/* =====================================================
+              HEADING
+          ====================================================== */}
+
+          <h1
+            id="41gxzm"
             className="
-              mt-[20px]
-              w-full
-              max-w-full
+              pr-[115px]
 
-              xs:mt-[40px]
-              xs:w-[390px]
+              font-['Inter']
+              text-[24px]
+              font-medium
+              leading-[1.1]
+              tracking-[-0.035em]
+              text-[#111111]
 
-              sm:mt-[42px]
-              sm:w-[420px]
+              xs:pr-[125px]
+              xs:text-[28px]
+              xs:leading-[1.08]
 
-              md:mt-[44px]
+              sm:pr-[145px]
+              sm:text-[31px]
+
+              md:pr-[170px]
+              md:text-[35px]
+
+              lg:pr-0
+              lg:text-[39px]
+              lg:leading-[1.12]
+              lg:tracking-[-0.03em]
+
+              xl:text-[33px]
+            "
+          >
+            A Practical Path to{" "}
+            <span className="text-[#850052]">ERP</span>
+          </h1>
+
+          {/* =====================================================
+              DESCRIPTION
+          ====================================================== */}
+
+          <p
+            id="lql9x7"
+            className="
+              mt-[13px]
+              max-w-[100%]
+              pr-[105px]
+
+              font-['Inter']
+              text-[12px]
+              font-medium
+              leading-[1.35]
+              text-[#1e1e1e]
+
+              xs:mt-[15px]
+              xs:pr-[115px]
+              xs:text-[13px]
+              xs:leading-[1.32]
+
+              sm:mt-[16px]
+              sm:max-w-[600px]
+              sm:pr-[125px]
+              sm:text-[14px]
+
+              md:mt-[17px]
+              md:max-w-[620px]
+              md:pr-[145px]
+              md:text-[15px]
+
+              lg:mt-[12px]
+              lg:max-w-[700px]
+              lg:pr-0
+              lg:text-[16px]
+              lg:leading-[1.32]
+
+              xl:text-[15.5px]
+            "
+          >
+            Every business is different, so there is no single ERP approach
+            that works for everyone. We take the time to understand your
+            business before deciding what needs to change.
+          </p>
+
+          {/* =====================================================
+              STEPS
+          ====================================================== */}
+
+          <div
+            id="g9w64w"
+            className="
+              mt-[28px]
+              w-[72%]
+              max-w-[390px]
+
+              xs:mt-[30px]
+              xs:w-[70%]
+
+              sm:mt-[32px]
+              sm:w-[64%]
+              sm:max-w-[420px]
+
+              md:mt-[34px]
+              md:w-[61%]
+              md:max-w-[430px]
 
               lg:mt-[45px]
               lg:w-[430px]
@@ -272,23 +328,25 @@ export default function PracticalERPPath() {
           >
             {steps.map((step, index) => (
               <div
-                key={step.no}
+                key={step.number}
                 className={`
                   flex
                   items-start
                   gap-[8px]
 
-                  xs:gap-[12px]
-                  sm:gap-[13px]
+                  xs:gap-[10px]
+
+                  sm:gap-[12px]
 
                   ${
                     index !== steps.length - 1
-                      ? "mb-[10px] xs:mb-[18px] sm:mb-[20px] lg:mb-[21px]"
+                      ? "mb-[12px] xs:mb-[16px] sm:mb-[18px] lg:mb-[21px]"
                       : ""
                   }
                 `}
               >
-                {/* NUMBER CIRCLE */}
+                {/* NUMBER */}
+
                 <div
                   className="
                     flex
@@ -303,62 +361,72 @@ export default function PracticalERPPath() {
                     font-['Inter']
                     text-[13px]
                     font-medium
-                    leading-none
                     text-white
 
-                    xs:h-[45px]
-                    xs:w-[45px]
-                    xs:text-[18px]
+                    xs:h-[40px]
+                    xs:w-[40px]
+                    xs:text-[15px]
 
-                    sm:h-[46px]
-                    sm:w-[46px]
+                    sm:h-[43px]
+                    sm:w-[43px]
+                    sm:text-[16px]
+
+                    md:h-[44px]
+                    md:w-[44px]
+                    md:text-[17px]
 
                     lg:h-[44px]
                     lg:w-[44px]
+                    lg:text-[18px]
                   "
                 >
-                  {step.no}
+                  {step.number}
                 </div>
 
                 {/* TEXT */}
-                <div className="min-w-0 pt-[2px]">
-                  <h2
+
+                <div className="min-w-0 flex-1 pt-[1px]">
+                  <h3
                     className="
                       font-['Plus_Jakarta_Sans']
-                      text-[14px]
-                      font-bold
-                      leading-[1.1]
-                      tracking-[-0.02em]
-                      text-[#151515]
+                      text-[15px]
+                      font-semibold
+                      leading-[1.2]
+                      text-[#111111]
 
-                      xs:text-[18px]
-                      xs:leading-[1.08]
+                      xs:text-[17px]
 
-                      sm:text-[19px]
+                      sm:text-[18px]
+
+                      md:text-[19px]
+
                       lg:text-[19px]
                     "
                   >
                     {step.title}
-                  </h2>
+                  </h3>
 
                   <p
                     className="
-                      mt-[4px]
-                      max-w-[390px]
+                      mt-[3px]
+                      max-w-[370px]
+
                       font-['Inter']
                       text-[11px]
-                      font-normal
+                      font-medium
                       leading-[1.3]
-                      text-[#242424]
+                      text-[#333333]
 
-                      xs:text-[13px]
-                      xs:leading-[1.28]
+                      xs:text-[12px]
 
-                      sm:text-[14px]
+                      sm:text-[13px]
+
+                      md:text-[14px]
+
                       lg:text-[14px]
                     "
                   >
-                    {step.text}
+                    {step.description}
                   </p>
                 </div>
               </div>
