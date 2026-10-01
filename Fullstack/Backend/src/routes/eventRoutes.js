@@ -1,5 +1,8 @@
 const express = require("express");
 
+const router = express.Router();
+const authMiddleware = require("../middlewares/auth.middleware");
+
 const {
   createEvent,
   getAllEvents,
@@ -8,21 +11,19 @@ const {
   deleteEvent,
 } = require("../controllers/eventController");
 
-const router = express.Router();
+// Create Event
+router.post("/", authMiddleware, createEvent);
 
-// CREATE
-router.post("/", createEvent);
-
-// GET ALL
+// Get All Events
 router.get("/", getAllEvents);
 
-// GET SINGLE
+// Get Event By ID
 router.get("/:id", getEventById);
 
-// UPDATE
-router.put("/:id", updateEvent);
+// Update Event
+router.put("/:id", authMiddleware, updateEvent);
 
-// DELETE
-router.delete("/:id", deleteEvent);
+// Delete Event
+router.delete("/:id", authMiddleware, deleteEvent);
 
 module.exports = router;

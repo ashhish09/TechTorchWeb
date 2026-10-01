@@ -1,16 +1,18 @@
 const express = require("express");
 const router = express.Router();
+
 const {
-  registerAdmin,
-  loginAdmin,
   getAdminProfile,
+  getAllAdmins,
   getAdminById,
   updateAdmin,
   updateAdminPassword,
   toggleAdminStatus,
   deleteAdmin,
 } = require("../controllers/adminController");
+
 const authMiddleware = require("../middlewares/auth.middleware");
+const { requireSuperadmin } = authMiddleware;
 
 router.post("/register", registerAdmin);
 router.post("/login", loginAdmin);

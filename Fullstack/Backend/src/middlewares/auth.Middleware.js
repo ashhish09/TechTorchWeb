@@ -32,4 +32,12 @@ const authMiddleware = asyncHandler(async (req, res, next) => {
   next();
 });
 
+const requireSuperadmin = (req, res, next) => {
+  if (req.admin?.role !== "superadmin") {
+    return res.status(403).json({ success: false, message: "Superadmin access required" });
+  }
+  next();
+};
+
 module.exports = authMiddleware;
+module.exports.requireSuperadmin = requireSuperadmin;

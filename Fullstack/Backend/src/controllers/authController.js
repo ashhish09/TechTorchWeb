@@ -5,8 +5,9 @@ const asyncHandler = require("../utils/asyncHandler");
 const { generateToken } = require("../utils/generateToken");
 
 
+// ================= REGISTER =================
 const registerAdmin = asyncHandler(async (req, res) => {
-  const { name, contact, emergency, email, password } = req.body;
+  const { name, email, password } = req.body;
 
   if (!contact || !emergency || !email || !password) {
     throw ApiError.badRequest("All fields are required");
@@ -205,12 +206,8 @@ const deleteAdmin = asyncHandler(async (req, res) => {
   });
 });
 const logoutAdmin = asyncHandler(async (req, res) => {
-  res.clearCookie("token");
-
-  return res.status(200).json({
-    success: true,
-    message: "Logged out successfully",
-  });
+  res.clearCookie("token", cookieOptions());
+  return res.status(200).json({ success: true, message: "Logged out successfully" });
 });
 
 
