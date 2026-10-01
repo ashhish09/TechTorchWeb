@@ -5,7 +5,6 @@ import {
   Routes,
   Route,
   Outlet,
-  Navigate,
   useLocation,
 } from "react-router-dom";
 
@@ -192,7 +191,7 @@ import Discipline from "./pages/What'sNext/TechPulse/Discipline.jsx";
 import ExecutiveStrategy from "./pages/What'sNext/TechPulse/ExecutiveStrategy.jsx";
 
 // =================================================
-// TECH PULSE - DIGITAL SOLUTIONS
+// DIGITAL SOLUTIONS
 // =================================================
 import EnterpriseSolution from "./pages/What'sNext/TechPulse/DigitalSolution/Enterprisesolution.jsx";
 import SystemicAgility from "./pages/What'sNext/TechPulse/DigitalSolution/SystemicAgility.jsx";
@@ -299,17 +298,18 @@ import DiscussPriorities from "./pages/Capabilities/ItAugmentation/MSPSupport/Di
 import ConnectMSP from "./pages/Capabilities/ItAugmentation/MSPSupport/ConnectMSP.jsx";
 
 // =================================================
-// OFFSHORE TEAMS
+// OFSHORE TEAMS
 // =================================================
-import OffshoreStrategy from "./pages/Capabilities/ItAugmentation/OffshoreTeams/OffshoreStrategy.jsx";
-import EngagementArchitecture from "./pages/Capabilities/ItAugmentation/OffshoreTeams/EngagementArchitecture.jsx";
-import LifecycleGovernance from "./pages/Capabilities/ItAugmentation/OffshoreTeams/LifecycleGovernance.jsx";
-import DevelopmentTeam from "./pages/Capabilities/ItAugmentation/OffshoreTeams/DevelopmentTeam.jsx";
-import DevelopmentRequirements from "./pages/Capabilities/ItAugmentation/OffshoreTeams/DevelopmentRequirements.jsx";
+import OffshoreStrategy  from "./pages/Capabilities/ItAugmentation/OffshoreTeams/OffshoreStrategy.jsx";
+import EngagementArchitecture  from "./pages/Capabilities/ItAugmentation/OffshoreTeams/EngagementArchitecture.jsx";
+import LifecycleGovernance  from "./pages/Capabilities/ItAugmentation/OffshoreTeams/LifecycleGovernance.jsx";
+import DevelopmentTeam  from "./pages/Capabilities/ItAugmentation/OffshoreTeams/DevelopmentTeam.jsx";
+import DevelopmentRequirements  from "./pages/Capabilities/ItAugmentation/OffshoreTeams/DevelopmentRequirements.jsx";
 
 // =================================================
 // EDUCATION
 // =================================================
+
 import EducationHero from "./pages/Industry/Education/EducationHero.jsx";
 import EducationWork from "./pages/Industry/Education/EducationWork.jsx";
 import EducationTechnology from "./pages/Industry/Education/EducationTechnology.jsx";
@@ -317,11 +317,12 @@ import EducationGrowth from "./pages/Industry/Education/EducationGrowth.jsx";
 import EducationMethodology from "./pages/Industry/Education/EducationMethodology.jsx";
 import EducationTransform from "./pages/Industry/Education/EducationTransform.jsx";
 import EducationSolutions from "./pages/Industry/Education/EducationSolutions.jsx";
-import ScheduleDiscovery from "./pages/Industry/Education/ScheduleDiscovery.jsx";
+import ScheduleDiscovery  from "./pages/Industry/Education/ScheduleDiscovery.jsx";
 
 // =================================================
 // INSURANCE
 // =================================================
+
 import InsuranceHero from "./pages/Industry/Insurance/InsuranceHero.jsx";
 import InsuranceSolution from "./pages/Industry/Insurance/InsuranceSolution.jsx";
 import ConnectedOperation from "./pages/Industry/Insurance/ConnectedOperations.jsx";
@@ -333,6 +334,7 @@ import GetInTouch from "./pages/Industry/Insurance/GetInTouch.jsx";
 // =================================================
 // FINANCE
 // =================================================
+
 import FinanceHero from "./pages/Industry/Finance/FinanceHero.jsx";
 import FinanceArchitecture from "./pages/Industry/Finance/FinanceArchitecture.jsx";
 import FinanceTechnology from "./pages/Industry/Finance/FinanceTechnology.jsx";
@@ -344,6 +346,7 @@ import FinanceGetInTouch from "./pages/Industry/Finance/FinanceGetInTouch.jsx";
 // =================================================
 // HEALTHCARE
 // =================================================
+
 import HealthcareHero from "./pages/Industry/Healthcare/HealthcareHero.jsx";
 import HealthcareExplore from "./pages/Industry/Healthcare/HealthcareExplore.jsx";
 import HealthcareTechnology from "./pages/Industry/Healthcare/HealthcareTechnology.jsx";
@@ -352,7 +355,9 @@ import ExperianceSecurity from "./pages/Industry/Healthcare/ExperianceSecurity.j
 import InsightOperations from "./pages/Industry/Healthcare/InsightOperations.jsx";
 import HealthcareApproach from "./pages/Industry/Healthcare/HealthcareApproach.jsx";
 import TransformationDesk from "./pages/Industry/Healthcare/TransformationDesk.jsx";
+
 import HealthcareGetInTouch from "./pages/Industry/Healthcare/HealthcareGetInTouch.jsx";
+
 
 // =================================================
 // INFORMATION TECHNOLOGY
@@ -369,8 +374,9 @@ import ItFoundation from "./pages/Industry/InformationTechnology/ItFoundation.js
 import ITGetInTouch from "./pages/Industry/InformationTechnology/ITGetInTouch.jsx";
 
 // =================================================
-// MANUFACTURING
+// INFORMATION TECHNOLOGY
 // =================================================
+
 import ManufacturingHero from "./pages/Industry/Manufacturing/ManufacturingHero.jsx";
 import ManufacturingTechnology from "./pages/Industry/Manufacturing/ManufacturingTechnology.jsx";
 import ManufacturingSolution from "./pages/Industry/Manufacturing/ManufacturingSolution.jsx";
@@ -380,9 +386,11 @@ import ManufacturingApproach from "./pages/Industry/Manufacturing/ManufacturingA
 import ManufacturingTechTorch from "./pages/Industry/Manufacturing/ManufacturingTechTorch.jsx";
 import ManufacturingGetInTouch from "./pages/Industry/Manufacturing/ManufacturingGetInTouch.jsx";
 
+
 // =================================================
 // TELECOMMUNICATIONS
 // =================================================
+
 import TcHero from "./pages/Industry/Telecommunication/TcHero.jsx";
 import TcTechnology from "./pages/Industry/Telecommunication/TcTechnology.jsx";
 import TcKeySolution from "./pages/Industry/Telecommunication/TcKeySolution.jsx";
@@ -394,6 +402,7 @@ import TcGetinTouch from "./pages/Industry/Telecommunication/TcGetInTouch.jsx";
 // =================================================
 // ENERGY
 // =================================================
+
 import EnergyHero from "./pages/Industry/Energy/EnergyHero.jsx";
 import EnergyTechnology from "./pages/Industry/Energy/EnergyTechnology.jsx";
 import EnergyKeySolution from "./pages/Industry/Energy/EnergyKeySolution.jsx";
@@ -405,6 +414,7 @@ import EnergyGetInTouch from "./pages/Industry/Energy/EnergyGetInTouch.jsx";
 // =================================================
 // TRANSPORTATION
 // =================================================
+
 import TransHero from "./pages/Industry/Transportation/TransHero.jsx";
 import TransportationConnected from "./pages/Industry/Transportation/TransportationConnected.jsx";
 import TransportationSolution from "./pages/Industry/Transportation/TransportationSolution.jsx";
@@ -417,6 +427,7 @@ import TransportationGetInTouch from "./pages/Industry/Transportation/Transporta
 // =================================================
 // FMCG
 // =================================================
+
 import FmcgHero from "./pages/Industry/Fmcg/FmcgHero.jsx";
 import FmcgSolution from "./pages/Industry/Fmcg/FmcgSolution.jsx";
 import FmcgOurSolution from "./pages/Industry/Fmcg/FmcgOurSolution.jsx";
@@ -441,12 +452,6 @@ import EcommerceApproach from "./pages/Industry/ECommerce/EcommerceApproach.jsx"
 import EcommerceNextPhase from "./pages/Industry/ECommerce/EcommerceNextPhase.jsx";
 import ECommerceGetInTouch from "./pages/Industry/ECommerce/ECommerceGetInTouch.jsx";
 
-// =================================================
-// START CONVERSATION
-// =================================================
-import StartConversation from "./pages/StartConversation/StartConversation.jsx";
-import ExploreQuestions from "./pages/StartConversation/ExploreQuestions.jsx";
-import ConversationToggle from "./pages/StartConversation/ConversationToggle.jsx";
 
 // =================================================
 // SCROLL TO TOP
@@ -471,6 +476,7 @@ function ScrollToTop() {
 function MainLayout() {
   return (
     <div className="min-h-screen flex flex-col">
+
       {/* NAVBAR */}
       <Navbar />
 
@@ -481,448 +487,1004 @@ function MainLayout() {
 
       {/* FOOTER */}
       <Footer />
+
     </div>
   );
 }
 
 // =================================================
-// PAGE HELPER
-// Renders a list of section components one after another.
+// HOME PAGE
 // =================================================
-function Stack({ items }) {
+function Home() {
   return (
     <>
-      {items.map((Section, i) => (
-        <Section key={i} />
-      ))}
+      <Hero />
+      <Hero2 />
+      <Hero3 />
+      <Section4 />
+      {/* <Section5 /> */}
+      <Section6 />
+      <Section7 />
+      <Section8 />
+      <Section9 />
     </>
   );
 }
 
 // =================================================
-// HOME + HERO SLIDE PAGES
+// SLIDE 1 PAGE
 // =================================================
-const Home = () => (
-  <Stack items={[Hero, Hero2, Hero3, Section4, /* Section5, */ Section6, Section7, Section8, Section9]} />
-);
-
-const Slide1Page = () => (
-  <Stack items={[HeroSlide01, HeroSlide02, HeroSlide03, HeroSlide04]} />
-);
-
-const Slide2Page = () => (
-  <Stack items={[Hero02Slide01, Hero02Slide02, Hero02Slide03, Hero02Slide04, Hero02Slide05, Hero02Slide06]} />
-);
-
-const Slide3Page = () => (
-  <Stack items={[Hero03Slide01, Hero03Slide02, Hero03Slide03, Hero03Slide04, Hero03Slide05, Hero03Slide06, Hero03Slide07]} />
-);
-
-const Slide4Page = () => (
-  <Stack items={[Hero04Slide01, Hero04Slide02, Hero04Slide03, Hero04Slide04, Hero04Slide05]} />
-);
-
-const Slide5Page = () => (
-  <Stack items={[Hero05Slide01, Hero05Slide02, Hero05Slide03, Hero05Slide04]} />
-);
-
-// =================================================
-// OUR STORY / KNOW MORE
-// =================================================
-const PhilosophyPage = () => (
-  <Stack items={[EnterpriseHero, CoreFoundation, ScaleAtSpeed, StrategicCapabilities, PhiosophySection, TransformationForm]} />
-);
-
-const KnowMorePage = () => (
-  <Stack items={[EnterpriseAcceleration, TransformationReady, ProvenImpact, PracticalIntelligence]} />
-);
-
-// =================================================
-// WHAT'S NEXT
-// =================================================
-const TechTorchViewPage = () => (
-  <Stack items={[TechTorchView, Philosophy, Capabilities, Methodology, ReadyScale]} />
-);
-
-const FieldNotePage = () => (
-  <Stack items={[Banner, TechnologySection, ConnectSection, OperationalAdvantage, IntegratedCapabilities]} />
-);
-
-const ThinkAheadPage = () => (
-  <Stack items={[ReadSection, Technologyarticlesection, EcosystemHeroSection, PerspectiveSection]} />
-);
-
-const CyberSecurityPage = () => (
-  <Stack items={[WhatsNextSection, CyberSecurityHeroSection, SecurityCapabilitiesSection, ResiliencePillarsSection, SecurityOutcomes]} />
-);
-
-const CyberSecurityAboutPage = () => (
-  <Stack items={[SecurityPerspectiveSection, AboutSecurity, SecurityChallenge, EditorialReflection, OurApproach, WhyTechtorch]} />
-);
-
-const SecureBusinessPage = () => (
-  <Stack items={[SecurityInitiative, ProtocolDelivery, SelectionEngine, AdvisoryFramework]} />
-);
-
-const ScheduleAdvisoryPage = () => (
-  <Stack items={[AdvisoryDesk, DispatchConsole, TimeboxProtocol]} />
-);
-
-const BusinessGrowthPage = () => (
-  <Stack
-    items={[
-      GrowWithBusinessSection,
-      PurspectiveSection,
-      ArchitectureSection,
-      MethodologySection,
-      EcosystemCapabilitiesSection,
-      TechnologyCapabilities,
-      CoreEngineering,
-      MarketExpertiseSection,
-      InstitutionalCommitmentSection,
-      ParadigmSection,
-    ]}
-  />
-);
-
-const TechPulsePage = () => (
-  <Stack
-    items={[
-      DataDecisions,
-      PerspectiveAnalysis,
-      StrategicInquiry,
-      StructuredMethodology,
-      OperationalImpact,
-      Automation,
-      CrossFunctional,
-      Discipline,
-      ExecutiveStrategy,
-    ]}
-  />
-);
-
-const TechPulseDigitalSolutionPage = () => (
-  <Stack items={[EnterpriseSolution, SystemicAgility, ArchitectureLifecycle, ValidatedSystems]} />
-);
-
-// =================================================
-// CAPABILITIES
-// =================================================
-const PlatformPage = () => (
-  <Stack items={[Businessplatformshero, OurAproach, OurPlatforms, TechTorchPlatform, DirectEnterprise]} />
-);
-
-const DigitalSolutionPage = () => (
-  <Stack
-    items={[
-      DigitalSolutionHero,
-      DigitalTransformation,
-      OurDigitalSolution,
-      DiffrentIndustries,
-      ConnectedBusiness,
-      TechTorchTechnology,
-      RequirementReality,
-    ]}
-  />
-);
-
-const OurServicePage = () => (
-  <Stack items={[OurServiceHero, StrategicPerspective, PortfolioArchitecture, DeliveryBlueprint, TechnologyRoadmap]} />
-);
-
-const AiPage = () => (
-  <Stack items={[AiService, AiStrategic, AiAdvantage, AiEcosystem, AiEcosystemIntegration]} />
-);
-
-const ItAugmentationPage = () => (
-  <Stack items={[ItWorkforceVelocity, ItStrategicperspective, ItFlexibleEngagement, ItOperational]} />
-);
-
-const ContractStaffingPage = () => (
-  <Stack items={[Contracthero, CapabilityAnalysis, Pipeline]} />
-);
-
-const ContractToHirePage = () => (
-  <Stack items={[ContractToHireHero, CthFramework, BuildConfidence]} />
-);
-
-const DedicatedDevelopmentPage = () => (
-  <Stack items={[DdHero, DdOverview, DdStrenghten]} />
-);
-
-const RemoteEngineerPage = () => (
-  <Stack items={[ReHero, CapabilityOverview, ReStrengthen]} />
-);
-
-const ProjectBasedHiringPage = () => (
-  <Stack items={[PbhHero, PbhExecutive, PbhSpecialized, PbhProjectForward]} />
-);
-
-const MspSupportPage = () => (
-  <Stack items={[MSP1, MSP2, MSP3, DiscussPriorities, ConnectMSP]} />
-);
-
-const OffshoreTeamsPage = () => (
-  <Stack items={[OffshoreStrategy, EngagementArchitecture, LifecycleGovernance, DevelopmentTeam, DevelopmentRequirements]} />
-);
-
-// =================================================
-// INDUSTRIES
-// =================================================
-const EducationPage = () => (
-  <Stack
-    items={[
-      EducationHero,
-      EducationWork,
-      EducationTechnology,
-      EducationGrowth,
-      EducationMethodology,
-      EducationTransform,
-      EducationSolutions,
-      ScheduleDiscovery,
-    ]}
-  />
-);
-
-const InsurancePage = () => (
-  <Stack
-    items={[
-      InsuranceHero,
-      InsuranceSolution,
-      ConnectedOperation,
-      InsuranceDigitalTransformation,
-      InsuranceCustomer,
-      InsuranceWhyTt,
-      GetInTouch,
-    ]}
-  />
-);
-
-const FinancePage = () => (
-  <Stack
-    items={[
-      FinanceHero,
-      FinanceArchitecture,
-      FinanceTechnology,
-      FinanceKeyBusiness,
-      FinanceFintech,
-      FinanceNextStep,
-      FinanceGetInTouch,
-    ]}
-  />
-);
-
-const HealthcarePage = () => (
-  <Stack
-    items={[
-      HealthcareHero,
-      HealthcareExplore,
-      HealthcareTechnology,
-      HealthcareOperation,
-      ExperianceSecurity,
-      InsightOperations,
-      HealthcareApproach,
-      TransformationDesk,
-      HealthcareGetInTouch,
-    ]}
-  />
-);
-
-const InformationTechnologyPage = () => (
-  <Stack
-    items={[
-      ItHero,
-      ItBusiness,
-      ItService,
-      ItSoftware,
-      ItDigitalSolution,
-      ItInfrastructure,
-      ItApproach,
-      ItTechTorch,
-      ItFoundation,
-      ITGetInTouch,
-    ]}
-  />
-);
-
-const ManufacturingPage = () => (
-  <Stack
-    items={[
-      ManufacturingHero,
-      ManufacturingTechnology,
-      ManufacturingSolution,
-      ManufacturingErp,
-      SoftwareEngineering,
-      ManufacturingApproach,
-      ManufacturingTechTorch,
-      ManufacturingGetInTouch,
-    ]}
-  />
-);
-
-const TelecommunicationPage = () => (
-  <Stack items={[TcHero, TcTechnology, TcKeySolution, TcSoftwareEngineer, TcService, TcApproach, TcGetinTouch]} />
-);
-
-const EnergyPage = () => (
-  <Stack
-    items={[
-      EnergyHero,
-      EnergyTechnology,
-      EnergyKeySolution,
-      EnergySoftwareEngineering,
-      EnergyTechnologyService,
-      EnergyApproach,
-      EnergyGetInTouch,
-    ]}
-  />
-);
-
-const TransportationPage = () => (
-  <Stack
-    items={[
-      TransHero,
-      TransportationConnected,
-      TransportationSolution,
-      TransportationSupplyChain,
-      TransportationSoftware,
-      TransportationApproach,
-      TransportationEnterprise,
-      TransportationGetInTouch,
-    ]}
-  />
-);
-
-const FmcgPage = () => (
-  <Stack
-    items={[
-      FmcgHero,
-      FmcgSolution,
-      FmcgOurSolution,
-      FmcgManagement,
-      FmcgBusiness,
-      FmcgSoftwareEngineering,
-      FmcgTechnologyService,
-      FmcgApproach,
-      FmcgGetInTouch,
-    ]}
-  />
-);
-
-const EcommercePage = () => (
-  <Stack
-    items={[
-      EcommerceHero,
-      EcommerceEnterprise,
-      EcommerceCapabilities,
-      EcommerceFrontend,
-      EcommerceSynergy,
-      EcommerceCustom,
-      EcommerceIntelligence,
-      EcommerceApproach,
-      EcommerceNextPhase,
-      ECommerceGetInTouch,
-    ]}
-  />
-);
-
-// =================================================
-// START CONVERSATION
-// =================================================
-const StartConversationPage = () => (
-  <Stack items={[StartConversation, ExploreQuestions, ConversationToggle]} />
-);
-
-// =================================================
-// APP + ROUTES
-// NOTE: URL paths below are assumptions - make sure they match
-// the links used in your Navbar / Footer / buttons.
-// =================================================
-export default function App() {
+function Slide1Page() {
   return (
     <>
+      <HeroSlide01 />
+      <HeroSlide02 />
+      <HeroSlide03 />
+      <HeroSlide04 />
+    </>
+  );
+}
+
+// =================================================
+// SLIDE 2 PAGE
+// =================================================
+function Slide2Page() {
+  return (
+    <>
+      <Hero02Slide01 />
+      <Hero02Slide02 />
+      <Hero02Slide03 />
+      <Hero02Slide04 />
+      <Hero02Slide05 />
+      <Hero02Slide06 />
+    </>
+  );
+}
+
+// =================================================
+// SLIDE 3 PAGE
+// =================================================
+function Slide3Page() {
+  return (
+    <>
+      <Hero03Slide01 />
+      <Hero03Slide02 />
+      <Hero03Slide03 />
+      <Hero03Slide04 />
+      <Hero03Slide05 />
+      <Hero03Slide06 />
+      <Hero03Slide07 />
+    </>
+  );
+}
+
+// =================================================
+// SLIDE 4 PAGE
+// =================================================
+function Slide4Page() {
+  return (
+    <>
+      <Hero04Slide01 />
+      <Hero04Slide02 />
+      <Hero04Slide03 />
+      <Hero04Slide04 />
+      <Hero04Slide05 />
+    </>
+  );
+}
+
+// =================================================
+// SLIDE 5 PAGE
+// =================================================
+function Slide5Page() {
+  return (
+    <>
+      <Hero05Slide01 />
+      <Hero05Slide02 />
+      <Hero05Slide03 />
+      <Hero05Slide04 />
+    </>
+  );
+}
+
+// =================================================
+// OUR STORY
+// =================================================
+function PhilosophyPage() {
+  return (
+    <>
+      <EnterpriseHero />
+      <CoreFoundation />
+      <ScaleAtSpeed />
+      <StrategicCapabilities />
+      <PhiosophySection />
+      <TransformationForm />
+    </>
+  );
+}
+
+// =================================================
+// KNOW MORE
+// =================================================
+function KnowMorePage() {
+  return (
+    <>
+      <EnterpriseAcceleration />
+      <TransformationReady />
+      <ProvenImpact />
+      <PracticalIntelligence />
+    </>
+  );
+}
+
+// =================================================
+// TECHTORCH VIEW
+// =================================================
+function WhatNextPage() {
+  return (
+    <>
+      <TechTorchView />
+      <Philosophy />
+      <Capabilities />
+      <Methodology />
+      <ReadyScale />
+    </>
+  );
+}
+
+// =================================================
+// FIELD NOTE
+// =================================================
+function FieldNotePage() {
+  return (
+    <>
+      <Banner />
+      <TechnologySection />
+      <ConnectSection />
+      <OperationalAdvantage />
+      <IntegratedCapabilities />
+    </>
+  );
+}
+
+// =================================================
+// THINK AHEAD
+// =================================================
+function ThinkAheadPage() {
+  return (
+    <>
+      <ReadSection />
+      <Technologyarticlesection />
+      <PerspectiveSection />
+      <EcosystemHeroSection />
+    </>
+  );
+}
+
+// =================================================
+// CYBER SECURITY
+// =================================================
+function CyberSecurityPage() {
+  return (
+    <>
+      <CyberSecurityHeroSection />
+      <SecurityPerspectiveSection />
+      <SecurityChallenge />
+      <OurApproach />
+      <SecurityCapabilitiesSection />
+      <ResiliencePillarsSection />
+      <WhyTechtorch />
+      <SecurityOutcomes />
+      <EditorialReflection />
+      <AboutSecurity />
+      <WhatsNextSection />
+    </>
+  );
+}
+
+// =================================================
+// SECURE BUSINESS
+// =================================================
+function SecureBusinessPage() {
+  return (
+    <>
+      <SecurityInitiative />
+      <ProtocolDelivery />
+      <SelectionEngine />
+      <AdvisoryFramework />
+    </>
+  );
+}
+
+// =================================================
+// SCHEDULE ADVISORY
+// =================================================
+function ScheduleAdvisoryPage() {
+  return (
+    <>
+      <AdvisoryDesk />
+      <DispatchConsole />
+      <TimeboxProtocol />
+    </>
+  );
+}
+
+// =================================================
+// BUSINESS GROWTH
+// =================================================
+function BusinessGrowthPage() {
+  return (
+    <>
+      <GrowWithBusinessSection />
+      <PurspectiveSection />
+      <ArchitectureSection />
+      <MethodologySection />
+      <EcosystemCapabilitiesSection />
+      <TechnologyCapabilities />
+      <CoreEngineering />
+      <MarketExpertiseSection />
+      <InstitutionalCommitmentSection />
+      <ParadigmSection />
+    </>
+  );
+}
+
+// =================================================
+// TECH PULSE
+// =================================================
+function TechPulsePage() {
+  return (
+    <>
+      <DataDecisions />
+      <PerspectiveAnalysis />
+      <StrategicInquiry />
+      <StructuredMethodology />
+      <OperationalImpact />
+      <Automation />
+      <CrossFunctional />
+      <Discipline />
+      <ExecutiveStrategy />
+    </>
+  );
+}
+
+// =================================================
+// DIGITAL SOLUTION
+// =================================================
+function DigitalSolution() {
+  return (
+    <>
+      <EnterpriseSolution />
+      <SystemicAgility />
+      <ArchitectureLifecycle />
+      <ValidatedSystems />
+    </>
+  );
+}
+
+// =================================================
+// PLATFORM
+// =================================================
+function Platform() {
+  return (
+    <>
+      <Businessplatformshero />
+      <OurAproach />
+      <OurPlatforms />
+      <TechTorchPlatform />
+      <DirectEnterprise />
+    </>
+  );
+}
+
+// =================================================
+// DIGITAL SOLUTIONS - CAPABILITIES
+// =================================================
+function CapabilitiesDigitalSolution() {
+  return (
+    <>
+      <DigitalSolutionHero />
+      <DigitalTransformation />
+      <OurDigitalSolution />
+      <DiffrentIndustries />
+      <ConnectedBusiness />
+      <TechTorchTechnology />
+      <RequirementReality />
+    </>
+  );
+}
+
+// =================================================
+// OUR SERVICE
+// =================================================
+function OurServiceSection() {
+  return (
+    <>
+      <OurServiceHero />
+      <StrategicPerspective />
+      <PortfolioArchitecture />
+      <DeliveryBlueprint />
+      <TechnologyRoadmap />
+    </>
+  );
+}
+
+// =================================================
+// ARTIFICIAL INTELLIGENCE
+// =================================================
+function ArtificialIntelligent() {
+  return (
+    <>
+      <AiService />
+      <AiStrategic />
+      <AiAdvantage />
+      <AiEcosystem />
+      <AiEcosystemIntegration />
+    </>
+  );
+}
+
+// =================================================
+// IT AUGMENTATION
+// =================================================
+function ItAugmentational() {
+  return (
+    <>
+      <ItWorkforceVelocity />
+      <ItStrategicperspective />
+      <ItFlexibleEngagement />
+      <ItOperational />
+    </>
+  );
+}
+
+// =================================================
+// CONTRACT STAFFING
+// =================================================
+function ContractStaffing() {
+  return (
+    <>
+      <Contracthero />
+      <CapabilityAnalysis />
+      <Pipeline />
+    </>
+  );
+}
+
+// =================================================
+// CONTRACT TO HIRE
+// =================================================
+function ContractToHire() {
+  return (
+    <>
+      <ContractToHireHero />
+      <CthFramework />
+      <BuildConfidence />
+    </>
+  );
+}
+
+// =================================================
+// DEDICATED DEVELOPMENT
+// =================================================
+function DedicatedDevelopment() {
+  return (
+    <>
+      <DdHero />
+      <DdOverview />
+      <DdStrenghten />
+    </>
+  );
+}
+
+// =================================================
+// REMOTE ENGINEERS
+// =================================================
+function RemoteEngineers() {
+  return (
+    <>
+      <ReHero />
+      <CapabilityOverview />
+      <ReStrengthen />
+    </>
+  );
+}
+
+// =================================================
+// PROJECT BASED HIRING
+// =================================================
+function ProjectBasedHiring() {
+  return (
+    <>
+      <PbhHero />
+      <PbhExecutive />
+      <PbhSpecialized />
+      <PbhProjectForward />
+    </>
+  );
+}
+
+// =================================================
+// RESOURCE REPLACEMENT
+// =================================================
+function ResourceReplacement() {
+  return (
+    <>
+      <RrMain />
+    </>
+  );
+}
+
+// =================================================
+// BENCH HIRING
+// =================================================
+function BenchHiring() {
+  return (
+    <>
+      <BhMain />
+    </>
+  );
+}
+
+// =================================================
+// VENDOR PARTNERSHIP
+// =================================================
+function VendorPartnership() {
+  return (
+    <>
+      <VpMain />
+    </>
+  );
+}
+
+// =================================================
+// MSP SUPPORT
+// =================================================
+function MSPSupport() {
+  return (
+    <>
+      <MSP1 />
+      <MSP2 />
+      <MSP3 />
+    </>
+  );
+}
+
+function OffshoreTeams() {
+  return (
+    <>
+     <OffshoreStrategy/>
+     <EngagementArchitecture/>
+     <LifecycleGovernance/>
+    </>
+  );
+}
+
+function Education(){
+  return( 
+    <>
+    <EducationHero />
+    <EducationWork />
+    <EducationTechnology />
+    <EducationGrowth />
+    <EducationMethodology />
+    <EducationTransform />
+    </>
+  )
+}
+function Insurance(){
+  return(
+    <>
+    <InsuranceHero />
+    <InsuranceSolution />
+    <ConnectedOperation />
+    <InsuranceDigitalTransformation />
+    <InsuranceCustomer />
+    <InsuranceWhyTt />
+    </>
+  )
+}
+function Finance(){
+  return(
+    <>
+    <FinanceHero />
+    <FinanceArchitecture />
+    <FinanceTechnology />
+    <FinanceKeyBusiness />
+    <FinanceFintech  />
+    <FinanceNextStep />
+    </>
+  )
+}
+function Healthcare(){
+  return(
+    <>
+    <HealthcareHero />
+    <HealthcareExplore />
+    <HealthcareTechnology />
+    <HealthcareOperation />
+    <ExperianceSecurity />
+    <InsightOperations />
+    <HealthcareApproach />
+    <TransformationDesk />
+    </>
+  )
+}
+function InformationTechnology(){
+  return(
+    <>
+    <ItHero />
+    <ItBusiness />
+    <ItService />
+    <ItSoftware />
+    <ItDigitalSolution />
+    <ItInfrastructure />
+    <ItApproach />
+    <ItTechTorch />
+    <ItFoundation />
+    </>
+  )
+}
+function Manufacturing(){
+  return(
+    <>
+    <ManufacturingHero />
+    <ManufacturingTechnology />
+    <ManufacturingSolution />
+    <ManufacturingErp />
+    <SoftwareEngineering />
+    <ManufacturingApproach />
+    <ManufacturingTechTorch />
+    </>
+  )
+}
+function Telecommunications(){
+  return (
+    <>
+    <TcHero />
+    <TcTechnology />
+    <TcKeySolution />
+    <TcSoftwareEngineer />
+    <TcService />
+    <TcApproach />
+    </>
+  )
+}
+
+function Energy(){
+  return(
+    <>
+    <EnergyHero />
+    <EnergyTechnology />
+    <EnergyKeySolution />
+    <EnergySoftwareEngineering />
+    <EnergyTechnologyService />
+    <EnergyApproach />
+    </>
+  )
+}
+function Transportation(){
+  return(
+    <>
+    <TransHero />
+    <TransportationConnected />
+    <TransportationSolution />
+    <TransportationSupplyChain />
+    <TransportationSoftware />
+    <TransportationApproach />
+    <TransportationEnterprise />
+    </>
+  )
+}
+function Fmcg(){
+  return(
+    <>
+    <FmcgHero />
+    <FmcgSolution />
+    <FmcgOurSolution />
+    <FmcgManagement />
+    <FmcgBusiness />
+    <FmcgSoftwareEngineering />
+    <FmcgTechnologyService />
+    <FmcgApproach />
+    </>
+  )
+}
+function ECommerce(){
+  return(
+    <>
+    <EcommerceHero />
+    <EcommerceEnterprise />
+    <EcommerceCapabilities />
+    <EcommerceFrontend />
+    <EcommerceSynergy />
+    <EcommerceCustom />
+    <EcommerceIntelligence />
+    <EcommerceApproach />
+    <EcommerceNextPhase />
+    </>
+  )
+}
+// =================================================
+// APP
+// =================================================
+function App() {
+  return (
+    <>
+      {/* Always move to top when route changes */}
       <ScrollToTop />
 
       <Routes>
+
+        {/* =================================================
+            ALL PAGES USE SAME NAVBAR + FOOTER
+        ================================================= */}
         <Route element={<MainLayout />}>
-          {/* HOME */}
+
+          {/* ================= HOME ================= */}
           <Route path="/" element={<Home />} />
 
-          {/* HERO SLIDE PAGES */}
-          <Route path="/slide-1" element={<Slide1Page />} />
-          <Route path="/slide-2" element={<Slide2Page />} />
-          <Route path="/slide-3" element={<Slide3Page />} />
-          <Route path="/slide-4" element={<Slide4Page />} />
-          <Route path="/slide-5" element={<Slide5Page />} />
+          {/* ================= SLIDES ================= */}
+          <Route path="/Slide1" element={<Slide1Page />} />
+          <Route path="/Slide2" element={<Slide2Page />} />
+          <Route path="/Slide3" element={<Slide3Page />} />
+          <Route path="/Slide4" element={<Slide4Page />} />
+          <Route path="/Slide5" element={<Slide5Page />} />
 
-          {/* OUR STORY / KNOW MORE */}
-          <Route path="/our-story" element={<PhilosophyPage />} />
-          <Route path="/know-more" element={<KnowMorePage />} />
+          {/* ================= OUR STORY ================= */}
+          <Route
+            path="/Philosophy"
+            element={<PhilosophyPage />}
+          />
 
-          {/* WHAT'S NEXT */}
-          <Route path="/whats-next/techtorch-view" element={<TechTorchViewPage />} />
+          {/* ================= KNOW MORE ================= */}
+          <Route
+            path="/KnowMore"
+            element={<KnowMorePage />}
+          />
 
-          <Route path="/whats-next/field-note" element={<FieldNotePage />} />
-          <Route path="/whats-next/field-note/integrated-capabilities" element={<IntegratedCapLayout />} />
-          <Route path="/whats-next/field-note/integrated-capabilities/erp-integration" element={<ERPIntegration />} />
-          <Route path="/whats-next/field-note/integrated-capabilities/operations-management" element={<OpManagement />} />
-          <Route path="/whats-next/field-note/integrated-capabilities/data-orchestration" element={<DataOrchestration />} />
-          <Route path="/whats-next/field-note/integrated-capabilities/legacy" element={<Legacy />} />
+          {/* ================= TECHTORCH VIEW ================= */}
+          <Route
+            path="/TechTorchView"
+            element={<WhatNextPage />}
+          />
 
-          <Route path="/whats-next/think-ahead" element={<ThinkAheadPage />} />
+          {/* ================= FIELD NOTE ================= */}
+          <Route
+            path="/field-note"
+            element={<FieldNotePage />}
+          />
 
-          <Route path="/whats-next/cyber-security" element={<CyberSecurityPage />} />
-          <Route path="/whats-next/cyber-security/about" element={<CyberSecurityAboutPage />} />
-          <Route path="/whats-next/cyber-security/secure-business" element={<SecureBusinessPage />} />
-          <Route path="/whats-next/cyber-security/secure-business/engagement-protocol" element={<ViewEngagementProtocol />} />
-          <Route path="/whats-next/cyber-security/secure-business/engagement-protocol/accept" element={<AcceptProceed />} />
-          <Route path="/whats-next/cyber-security/secure-business/engagement-protocol/export" element={<ExportProtocolPackage />} />
-          <Route path="/whats-next/cyber-security/secure-business/schedule-advisory" element={<ScheduleAdvisoryPage />} />
+          {/* ================= INTEGRATED CAPABILITIES ================= */}
+          <Route
+            path="/integrated-capabilities"
+            element={<IntegratedCapLayout />}
+          >
+            <Route
+              path="erp-integration"
+              element={<ERPIntegration />}
+            />
 
-          <Route path="/whats-next/business-growth" element={<BusinessGrowthPage />} />
+            <Route
+              path="operations-management"
+              element={<OpManagement />}
+            />
 
-          <Route path="/whats-next/tech-pulse" element={<TechPulsePage />} />
-          <Route path="/whats-next/tech-pulse/digital-solutions" element={<TechPulseDigitalSolutionPage />} />
+            <Route
+              path="data-orchestration"
+              element={<DataOrchestration />}
+            />
 
-          {/* CAPABILITIES */}
-          <Route path="/capabilities/platform" element={<PlatformPage />} />
-          <Route path="/capabilities/digital-solutions" element={<DigitalSolutionPage />} />
-          <Route path="/capabilities/our-service" element={<OurServicePage />} />
-          <Route path="/capabilities/ai" element={<AiPage />} />
+            <Route
+              path="legacy-modernization"
+              element={<Legacy />}
+            />
+          </Route>
 
-          <Route path="/capabilities/it-augmentation" element={<ItAugmentationPage />} />
-          <Route path="/capabilities/it-augmentation/contract-staffing" element={<ContractStaffingPage />} />
-          <Route path="/capabilities/it-augmentation/contract-to-hire" element={<ContractToHirePage />} />
-          <Route path="/capabilities/it-augmentation/dedicated-development" element={<DedicatedDevelopmentPage />} />
-          <Route path="/capabilities/it-augmentation/remote-engineer" element={<RemoteEngineerPage />} />
-          <Route path="/capabilities/it-augmentation/project-based-hiring" element={<ProjectBasedHiringPage />} />
-          <Route path="/capabilities/it-augmentation/resource-replacement" element={<RrMain />} />
-          <Route path="/capabilities/it-augmentation/bench-hiring" element={<BhMain />} />
-          <Route path="/capabilities/it-augmentation/vendor-partnership" element={<VpMain />} />
-          <Route path="/capabilities/it-augmentation/vendor-partnership/become-partner" element={<BecomePartner />} />
-          <Route path="/capabilities/it-augmentation/msp-support" element={<MspSupportPage />} />
-          <Route path="/capabilities/it-augmentation/offshore-teams" element={<OffshoreTeamsPage />} />
+          {/* ================= THINK AHEAD ================= */}
+          <Route
+            path="/think-ahead"
+            element={<ThinkAheadPage />}
+          />
 
-          {/* INDUSTRIES */}
-          <Route path="/industry/education" element={<EducationPage />} />
-          <Route path="/industry/insurance" element={<InsurancePage />} />
-          <Route path="/industry/finance" element={<FinancePage />} />
-          <Route path="/industry/healthcare" element={<HealthcarePage />} />
-          <Route path="/industry/information-technology" element={<InformationTechnologyPage />} />
-          <Route path="/industry/manufacturing" element={<ManufacturingPage />} />
-          <Route path="/industry/telecommunication" element={<TelecommunicationPage />} />
-          <Route path="/industry/energy" element={<EnergyPage />} />
-          <Route path="/industry/transportation" element={<TransportationPage />} />
-          <Route path="/industry/fmcg" element={<FmcgPage />} />
-          <Route path="/industry/ecommerce" element={<EcommercePage />} />
+          {/* ================= CYBER SECURITY ================= */}
+          <Route
+            path="/cyber-security"
+            element={<CyberSecurityPage />}
+          />
 
-          {/* START CONVERSATION */}
-          <Route path="/start-conversation" element={<StartConversationPage />} />
+          {/* ================= SECURE BUSINESS ================= */}
+          <Route
+            path="/secure-business"
+            element={<SecureBusinessPage />}
+          />
 
-          {/* FALLBACK */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          {/* ================= SCHEDULE ADVISORY ================= */}
+          <Route
+            path="/schedule-advisory"
+            element={<ScheduleAdvisoryPage />}
+          />
+
+          {/* ================= ENGAGEMENT PROTOCOL ================= */}
+          <Route
+            path="/engagement-protocol"
+            element={<ViewEngagementProtocol />}
+          />
+
+          <Route
+            path="/accept-proceed"
+            element={<AcceptProceed />}
+          />
+
+          <Route
+            path="/export-protocol"
+            element={<ExportProtocolPackage />}
+          />
+
+          {/* ================= BUSINESS GROWTH ================= */}
+          <Route
+            path="/Business-growth"
+            element={<BusinessGrowthPage />}
+          />
+
+          {/* ================= TECH PULSE ================= */}
+          <Route
+            path="/data-decisions"
+            element={<TechPulsePage />}
+          />
+
+          {/* ================= DIGITAL SOLUTION ================= */}
+          <Route
+            path="/digital-solutions"
+            element={<DigitalSolution />}
+          />
+
+          {/* =================================================
+              CAPABILITIES
+          ================================================= */}
+
+          {/* PLATFORM */}
+          <Route
+            path="/platform"
+            element={<Platform />}
+          />
+
+          {/* DIGITAL SOLUTION */}
+          <Route
+            path="/digitalsolution"
+            element={<CapabilitiesDigitalSolution />}
+          />
+
+          {/* OUR SERVICE */}
+          <Route
+            path="/OurService"
+            element={<OurServiceSection />}
+          />
+
+          {/* ARTIFICIAL INTELLIGENCE */}
+          <Route
+            path="/ArtificialIntelligent"
+            element={<ArtificialIntelligent />}
+          />
+
+          {/* IT AUGMENTATION */}
+          <Route
+            path="/ItAugmentation"
+            element={<ItAugmentational />}
+          />
+
+          {/* =================================================
+              STAFFING
+          ================================================= */}
+
+          {/* CONTRACT STAFFING */}
+          <Route
+            path="/Contract-Staffing"
+            element={<ContractStaffing />}
+          />
+
+          {/* CONTRACT TO HIRE */}
+          <Route
+            path="/contract-to-hire"
+            element={<ContractToHire />}
+          />
+
+          {/* DEDICATED DEVELOPMENT */}
+          <Route
+            path="/Dedicated-Development-Teams"
+            element={<DedicatedDevelopment />}
+          />
+
+          {/* REMOTE ENGINEERS */}
+          <Route
+            path="/remote-engineers"
+            element={<RemoteEngineers />}
+          />
+
+          {/* PROJECT BASED HIRING */}
+          <Route
+            path="/project-based-hiring"
+            element={<ProjectBasedHiring />}
+          />
+
+          {/* RESOURCE REPLACEMENT */}
+          <Route
+            path="/resource-replacement"
+            element={<ResourceReplacement />}
+          />
+
+          {/* BENCH HIRING */}
+          <Route
+            path="/bench-hiring"
+            element={<BenchHiring />}
+          />
+
+          {/* VENDOR PARTNERSHIP */}
+          <Route
+            path="/vendor-partnership"
+            element={<VendorPartnership />}
+          />
+
+          {/* BECOME PARTNER */}
+          <Route
+            path="/become-partner"
+            element={<BecomePartner />}
+          />
+
+          {/* MSP SUPPORT */}
+          <Route
+            path="/msp-support"
+            element={<MSPSupport />}
+          />
+
+          {/* MSP SUB PAGES */}
+          <Route
+            path="/discuss-priorities"
+            element={<DiscussPriorities />}
+          />
+
+          <Route
+            path="/connect-msp"
+            element={<ConnectMSP />}
+          />
+           
+           <Route
+            path="/offshore-teams"
+            element={<OffshoreTeams />}
+          />
+
+          <Route
+            path="/development-team"
+            element={<DevelopmentTeam/>}
+          />
+
+           <Route
+            path="/development-requirements"
+            element={<DevelopmentRequirements/>}
+          />
+
+            <Route
+            path="/industries/education"
+            element={<Education/>}
+          />
+          <Route
+            path="/industries/insurance"
+            element={<Insurance/>}
+          />
+          <Route
+            path="/industries/finance"
+            element={<Finance/>}
+          />
+          <Route
+            path="/industries/healthcare"
+            element={<Healthcare/>}
+          />
+
+           <Route
+            path="/education-solutions"
+            element={<EducationSolutions/>}
+          />
+
+           <Route
+            path="/schedule-discovery"
+            element={<ScheduleDiscovery/>}
+          />
+          <Route
+            path="/industries/information-technology"
+            element={<InformationTechnology/>}
+          />
+
+          <Route
+
+            path="/industries/manufacturing"
+            element={<Manufacturing/>}
+          />
+
+            <Route
+            path="/insurance-get-in-touch"
+            element={<GetInTouch/>}
+          />
+
+          <Route
+            path="/finance-get-in-touch"
+            element={<FinanceGetInTouch/>}
+          />
+
+          <Route
+            path="/healthcare-get-in-touch"
+            element={<HealthcareGetInTouch/>}
+          />
+
+           <Route
+            path="/it-get-in-touch"
+            element={<ITGetInTouch/>}
+          />
+          <Route
+            path="/manufacturing-get-in-touch"
+            element={<ManufacturingGetInTouch/>}
+
+          />
+          <Route
+            path="/industries/telecommunications"
+            element={<Telecommunications/>}
+
+          />
+           <Route
+            path="/industries/energy"
+            element={<Energy/>}
+          />
+
+           <Route
+            path="/telecommunication-get-in-touch"
+            element={<TcGetinTouch/>}
+          />
+
+           <Route
+            path="/energy-get-in-touch"
+            element={<EnergyGetInTouch/>}
+          />
+          <Route
+            path="/industries/transportation"
+            element={<Transportation/>}
+          />
+
+
+          <Route
+            path="/transportation-get-in-touch"
+            element={<TransportationGetInTouch/>}
+          />
+
+
+           <Route
+            path="/transportation-get-in-touch"
+            element={<TransportationGetInTouch/>}
+
+          />
+
+          <Route
+            path="/industries/fmcg"
+            element={<Fmcg/>}
+          />
+
+
+          <Route
+            path="/fmcg-get-in-touch"
+            element={<FmcgGetInTouch/>}
+          />
+
+          <Route
+            path="industries/e-commerce"
+            element={<ECommerce/>}
+          />
+
+          <Route
+            path="/ecommerce-get-in-touch"
+            element={<ECommerceGetInTouch/>}
+          />
         </Route>
+
       </Routes>
     </>
   );
 }
+export default App;
