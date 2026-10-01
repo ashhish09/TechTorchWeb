@@ -844,13 +844,14 @@ export default function OnePlatformSection() {
 
         .one-platform-heading {
           font-size: 32px;
-          font-weight: 800;
+          font-weight: 700;
           color: #ffffff;
           line-height: 1.2;
           margin: 0 0 14px 0;
         }
 
         .one-platform-description {
+         font-family: "Inter", sans-serif;
           font-size: 15px;
           font-weight: 500;
           color: #f1d9e4;
@@ -902,6 +903,7 @@ export default function OnePlatformSection() {
         }
 
         .card-title {
+        font-family: "Plus Jakarta Sans", sans-serif;
           font-size: 16px;
           font-weight: 700;
           color: #141414;
@@ -910,6 +912,7 @@ export default function OnePlatformSection() {
         }
 
         .card-desc {
+        font-family: "Inter", sans-serif;
           font-size: 13.5px;
           line-height: 1.5;
           color: #2f2f2f;

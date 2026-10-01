@@ -452,6 +452,10 @@ import EcommerceApproach from "./pages/Industry/ECommerce/EcommerceApproach.jsx"
 import EcommerceNextPhase from "./pages/Industry/ECommerce/EcommerceNextPhase.jsx";
 import ECommerceGetInTouch from "./pages/Industry/ECommerce/ECommerceGetInTouch.jsx";
 
+import StartConversation from "./pages/StartConversation/StartConversation.jsx";
+import ExploreQuestions from "./pages/StartConversation/ExploreQuestions.jsx";
+import ConversationToggle from "./pages/StartConversation/ConversationToggle.jsx";
+
 
 // =================================================
 // SCROLL TO TOP
