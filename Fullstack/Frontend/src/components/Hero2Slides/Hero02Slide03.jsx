@@ -47,7 +47,7 @@ const cards = [
   },
 ];
 
-<<<<<<< HEAD
+
   /* =========================
      CARD REFS
   ========================= */
@@ -90,7 +90,7 @@ const cards = [
       pair3Right.current,
     ].filter(Boolean);
 
-<<<<<<<<< Temporary merge branch 1
+
     const connector = connectorRef.current;
 
     /* ==========================================
@@ -130,7 +130,7 @@ const cards = [
     /* ==========================================
        TIMELINE
     ========================================== */
-=========
+
       const connector1 = connector1Ref.current;
       const connector2 = connector2Ref.current;
       const connector3 = connector3Ref.current;
@@ -232,7 +232,7 @@ const cards = [
       /* =================================================
          MAIN TIMELINE
       ================================================= */
->>>>>>>>> Temporary merge branch 2
+
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -253,18 +253,18 @@ const cards = [
        ENGAGE + FINANCE
     ================================================= */
 
-<<<<<<<<< Temporary merge branch 1
+
     if (!isMobile) {
       if (pair1Left.current) {
         gsap.set(pair1Left.current, {
           x: -80,
         });
       }
-=========
+
           end: isMobile
             ? "+=2300"
             : "+=2800",
->>>>>>>>> Temporary merge branch 2
+
 
       if (pair1Right.current) {
         gsap.set(pair1Right.current, {
@@ -299,7 +299,7 @@ const cards = [
       duration: 1.5,
     });
 
-<<<<<<<<< Temporary merge branch 1
+
     /* =================================================
        PAIR 1 OUT
     ================================================= */
@@ -437,7 +437,7 @@ const cards = [
     tl.to({}, {
       duration: 1.5,
     });
-=========
+
       if (!isMobile) {
         /*
           RIGHT → CENTER
@@ -635,10 +635,10 @@ const cards = [
       tl.to({}, {
         duration: 1.5,
       });
->>>>>>>>> Temporary merge branch 2
+
 
   }, sectionRef);
-=======
+
 /* =========================================================
    LAYOUT CONSTANTS — used both for rendering cards and for
    drawing the connector line, so they always stay in sync.
@@ -737,7 +737,7 @@ export default function OnePlatformSection() {
         },
       });
     }, sectionRef);
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
+
 
     return () => ctx.revert();
   }, [isMobile]);

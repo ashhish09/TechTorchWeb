@@ -1,14 +1,11 @@
 import React from "react";
 
-// ---- Brand tokens -----------------------------------------------------
 const colors = {
   cream: "#F9F8F2",
   ink: "#191013",
   inkSoft: "#4A3E43",
   brand: "#730042",
 };
-
-// ---- Small building blocks ---------------------------------------------
 
 function Eyebrow({ children }) {
   return (
@@ -61,28 +58,14 @@ function CTAButton({ children }) {
     <button
       className="tx-cta inline-flex items-center justify-center gap-2.5 self-start rounded-lg whitespace-nowrap w-full sm:w-auto"
       style={{
-<<<<<<< HEAD
-<<<<<<<<< Temporary merge branch 1
-=======
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
         marginTop: "clamp(16px, 2vw, 24px)",
         border: `1.5px solid ${colors.brand}`,
         color: colors.brand,
         padding: "12px 22px",
         fontSize: "clamp(14px, 1vw, 16px)",
-<<<<<<< HEAD
-=========
-        marginTop: "16px",
-        border: `1.5px solid ${colors.brand}`,
-        color: colors.brand,
-        padding: "12px 22px",
-        fontSize: "16px",
-        fontWeight: 700,
-=======
         fontWeight: 700,
         backgroundColor: "transparent",
         cursor: "pointer",
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
       }}
     >
       {children}
@@ -94,20 +77,12 @@ function CTAButton({ children }) {
 function CopyPanel() {
   return (
     <div
-<<<<<<< HEAD
       className="flex w-full max-w-2xl flex-col justify-center tx-copy"
       style={{
         paddingTop: "65px",
         paddingBottom: "65px",
         paddingLeft: "70px",
         paddingRight: "70px",
->>>>>>>>> Temporary merge branch 2
-=======
-      className="flex w-full flex-col justify-center"
-      style={{
-        padding:
-          "clamp(40px, 6vw, 80px) clamp(24px, 5vw, 80px)",
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
       }}
     >
       <Eyebrow>The Next Chapter</Eyebrow>
@@ -116,11 +91,7 @@ function CopyPanel() {
         className="tx-heading"
         style={{
           marginBottom: "24px",
-<<<<<<< HEAD
           fontSize: "26px",
-=======
-          fontSize: "28px",
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
           lineHeight: 1.18,
           fontFamily: "Plus Jakarta Sans",
           fontWeight: 600,
@@ -137,11 +108,7 @@ function CopyPanel() {
         className="tx-suite"
         style={{
           marginBottom: "20px",
-<<<<<<< HEAD
           fontSize: "25px",
-=======
-          fontSize: "30px",
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
           fontFamily: "Plus Jakarta Sans",
           fontWeight: 600,
           lineHeight: 1.25,
@@ -155,11 +122,7 @@ function CopyPanel() {
         className="tx-intro"
         style={{
           marginBottom: "40px",
-<<<<<<< HEAD
           fontSize: "20px",
-=======
-          fontSize: "21px",
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
           fontFamily: "Plus Jakarta Sans",
           maxWidth: "28rem",
           lineHeight: 1.5,
@@ -175,13 +138,8 @@ function CopyPanel() {
         style={{
           marginBottom: "16px",
           marginTop: "-10px",
-<<<<<<< HEAD
           fontFamily: "Inter",
           fontSize: "15px",
-=======
-          fontSize: "17px",
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
-          fontFamily: "Inter",
           maxWidth: "28rem",
           lineHeight: 1.65,
           fontWeight: 400,
@@ -198,66 +156,34 @@ function CopyPanel() {
   );
 }
 
-// ---- Image --------------------------------------------------------------
-
 function ImagePanel() {
   return (
-<<<<<<< HEAD
     <div className="tx-image-panel relative w-full h-full flex items-center justify-end overflow-hidden">
       <img
         src="/sec7.png"
         alt="TorchX"
         className="tx-image block"
-=======
-    <div className="tx-image-panel relative w-full overflow-hidden">
-      <img
-        src="/sec7.png"
-        alt="TorchX"
-        className="tx-image block w-full h-full"
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
       />
     </div>
   );
 }
 
-// ---- Main component ------------------------------------------------------
-
 export default function TorchXVideoSection() {
   return (
     <div
-<<<<<<< HEAD
       className="w-full font-sans"
-=======
-      className="w-full font-sans overflow-hidden"
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
       style={{
         backgroundColor: "#fff",
         isolation: "isolate",
       }}
     >
       <style>{`
-<<<<<<< HEAD
         .tx-cta {
           transition: all 0.25s ease;
         }
 
         .tx-cta:hover {
           background-color: ${colors.brand};
-=======
-        /* ---------------------------------------------------------------
-           CTA
-        ---------------------------------------------------------------- */
-
-        .tx-cta {
-          transition:
-            background-color 0.25s ease,
-            color 0.25s ease,
-            transform 0.25s ease;
-        }
-
-        .tx-cta:hover {
-          background-color: ${colors.brand} !important;
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
           color: ${colors.cream} !important;
           transform: translateY(-1px);
         }
@@ -270,11 +196,6 @@ export default function TorchXVideoSection() {
           transform: translateX(3px);
         }
 
-<<<<<<< HEAD
-        /* =====================================================
-           MAIN SECTION
-        ===================================================== */
-
         .tx-section {
           width: 100%;
           display: grid;
@@ -282,8 +203,6 @@ export default function TorchXVideoSection() {
           align-items: stretch;
           background: ${colors.cream};
           overflow: hidden;
-
-          /* Same spacing as HOW WE WORK */
           padding-left: 16px;
           padding-right: 16px;
           box-sizing: border-box;
@@ -315,11 +234,6 @@ export default function TorchXVideoSection() {
           overflow: hidden;
         }
 
-        /*
-          Image remains fully visible.
-          object-fit: contain prevents vertical cropping.
-        */
-
         .tx-image {
           display: block;
           width: 120%;
@@ -329,11 +243,6 @@ export default function TorchXVideoSection() {
           max-width: none;
         }
 
-        /* =====================================================
-           SMALL DEVICES
-           640px+
-        ===================================================== */
-
         @media (min-width: 640px) {
           .tx-section {
             padding-left: 24px;
@@ -341,21 +250,12 @@ export default function TorchXVideoSection() {
           }
         }
 
-        /* =====================================================
-           TABLET
-           768px+
-        ===================================================== */
-
         @media (min-width: 768px) {
           .tx-section {
             padding-left: 40px;
             padding-right: 40px;
           }
         }
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
 
         @media (max-width: 767px) {
           .tx-section {
@@ -430,10 +330,6 @@ export default function TorchXVideoSection() {
           }
         }
 
-        /* =====================================================
-           TABLET
-        ===================================================== */
-
         @media (min-width: 768px) and (max-width: 1023px) {
           .tx-section {
             height: 450px;
@@ -486,21 +382,12 @@ export default function TorchXVideoSection() {
           }
         }
 
-        /* =====================================================
-           DESKTOP
-           1024px+
-        ===================================================== */
-
         @media (min-width: 1024px) {
           .tx-section {
             padding-left: 100px;
             padding-right: 100px;
           }
         }
-
-        /* =====================================================
-           DESKTOP
-        ===================================================== */
 
         @media (min-width: 1024px) and (max-width: 1279px) {
           .tx-section {
@@ -554,10 +441,6 @@ export default function TorchXVideoSection() {
           }
         }
 
-        /* =====================================================
-           LARGE DESKTOP
-        ===================================================== */
-
         @media (min-width: 1280px) {
           .tx-section {
             height: 510px;
@@ -594,10 +477,6 @@ export default function TorchXVideoSection() {
           }
         }
 
-        /* =====================================================
-           EXTRA LARGE DESKTOP
-        ===================================================== */
-
         @media (min-width: 1600px) {
           .tx-section {
             height: 490px;
@@ -615,170 +494,17 @@ export default function TorchXVideoSection() {
             max-width: none;
             object-fit: contain;
             object-position: center right;
-=======
-
-        /* ---------------------------------------------------------------
-           MAIN SECTION
-        ---------------------------------------------------------------- */
-
-        .tx-section {
-          width: 100%;
-          background: ${colors.cream};
-        }
-
-
-        /* ---------------------------------------------------------------
-           IMAGE
-        ---------------------------------------------------------------- */
-
-        .tx-image-panel {
-          width: 100%;
-          height: auto;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: ${colors.cream};
-        }
-
-        .tx-image {
-          width: 100%;
-          height: auto;
-          display: block;
-          object-fit: contain;
-          object-position: center;
-        }
-
-
-        /* ---------------------------------------------------------------
-           TABLET / MEDIUM
-        ---------------------------------------------------------------- */
-
-        @media (min-width: 640px) and (max-width: 1023px) {
-          .tx-section {
-            display: grid;
-            grid-template-columns: 1fr;
-          }
-
-          .tx-image-panel {
-            max-height: 500px;
-          }
-
-          .tx-image {
-            max-height: 500px;
-            object-fit: contain;
-          }
-        }
-
-
-        /* ---------------------------------------------------------------
-           LAPTOP
-        ---------------------------------------------------------------- */
-
-        @media (min-width: 1024px) {
-          .tx-section {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            min-height: 560px;
-          }
-
-          .tx-image-panel {
-            height: 560px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            overflow: hidden;
-          }
-
-          .tx-image {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: right center;
-          }
-        }
-
-
-        /* ---------------------------------------------------------------
-           LARGE DESKTOP
-        ---------------------------------------------------------------- */
-
-        @media (min-width: 1280px) {
-          .tx-section {
-            grid-template-columns: 50% 50%;
-            min-height: 600px;
-          }
-
-          .tx-image-panel {
-            height: 600px;
-          }
-
-          .tx-image {
-            object-position: right center;
-          }
-        }
-
-
-        /* ---------------------------------------------------------------
-           EXTRA LARGE DESKTOP
-        ---------------------------------------------------------------- */
-
-        @media (min-width: 1536px) {
-          .tx-section {
-            grid-template-columns: 48% 52%;
-            min-height: 620px;
-          }
-
-          .tx-image-panel {
-            height: 620px;
-          }
-        }
-
-
-        /* ---------------------------------------------------------------
-           MOBILE
-        ---------------------------------------------------------------- */
-
-        @media (max-width: 639px) {
-          .tx-section {
-            display: flex;
-            flex-direction: column;
-          }
-
-          .tx-image-panel {
-            order: 1;
-          }
-
-          .tx-image {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
           }
         }
       `}</style>
 
       <section className="tx-section">
-<<<<<<< HEAD
-        {/* ================= COPY ================= */}
-
         <div className="tx-copy-wrapper">
           <CopyPanel />
         </div>
 
-        {/* ================= IMAGE ================= */}
-
         <div className="tx-image-wrapper">
           <ImagePanel />
-=======
-        {/* IMAGE */}
-        <div className="order-1 lg:order-2 w-full">
-          <ImagePanel />
-        </div>
-
-        {/* COPY */}
-        <div className="order-2 lg:order-1 flex items-center w-full">
-          <CopyPanel />
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
         </div>
       </section>
     </div>

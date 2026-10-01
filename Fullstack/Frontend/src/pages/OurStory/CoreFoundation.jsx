@@ -14,7 +14,6 @@ export default function CoreFoundation() {
   return (
     <section className="w-full overflow-hidden bg-[#F4F6FB] px-4 py-10 sm:px-6 sm:py-12 md:px-10 md:py-14 lg:px-[100px] lg:py-16 xl:py-20 font-inter">
       <div className="grid w-full grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[280px_minmax(0,1fr)] xl:gap-10">
-        {/* ================= LEFT COLUMN ================= */}
         <div className="w-full max-w-xl lg:max-w-none lg:self-start">
           <h2
             className="mb-3 text-[24px] font-bold leading-tight sm:text-[30px] lg:text-[32px]"
@@ -31,35 +30,14 @@ export default function CoreFoundation() {
             style={{ backgroundColor: "#9d174d" }}
           />
 
-<<<<<<< HEAD
           <p className="max-w-[420px] text-[15px] leading-relaxed text-black sm:text-[16px] lg:max-w-[360px]">
-=======
-          <p
-            className="
-<<<<<<< HEAD
-              max-w-[360px] max-w-full
-=======
-              max-w-[420px]
-              lg:max-w-[360px]
->>>>>>> 559925419f74898bfa5620e578852d8522d659d1
-              text-[15px]
-              sm:text-[16px]
-              leading-relaxed
-              text-black
-              font-inter
-            "
-          >
->>>>>>> 47322c39672fdfe03189944a65265a3f146ed0da
             Everything we build is rooted in a steadfast commitment to
             foundational integrity and visionary execution.
           </p>
         </div>
 
-        {/* ================= RIGHT COLUMN ================= */}
         <div className="flex min-w-0 flex-col gap-5 font-inter sm:gap-6">
-          {/* ================= MISSION / VISION ================= */}
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
-            {/* Mission */}
             <div className="overflow-hidden rounded-xl bg-white shadow-sm">
               <div className="aspect-[16/10] w-full sm:aspect-[4/3] lg:aspect-[16/10]">
                 <img
@@ -85,7 +63,6 @@ export default function CoreFoundation() {
               </div>
             </div>
 
-            {/* Vision */}
             <div className="overflow-hidden rounded-xl bg-white shadow-sm">
               <div className="aspect-[16/10] w-full sm:aspect-[4/3] lg:aspect-[16/10]">
                 <img
@@ -112,10 +89,8 @@ export default function CoreFoundation() {
             </div>
           </div>
 
-          {/* ================= CORE VALUES ================= */}
           <div className="rounded-xl bg-white p-4 shadow-sm sm:p-6 lg:p-8">
             <div className="flex flex-col gap-5 sm:gap-6 lg:flex-row lg:items-center lg:gap-8">
-              {/* Core Values Text */}
               <div className="w-full flex-shrink-0 lg:w-64">
                 <h3
                   className="mb-2 text-[17px] font-semibold sm:text-[18px]"
@@ -130,7 +105,6 @@ export default function CoreFoundation() {
                 </p>
               </div>
 
-              {/* Values */}
               <div className="grid w-full flex-1 grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
                 {values.map(({ icon: Icon, label }) => (
                   <div
